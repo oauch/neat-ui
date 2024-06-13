@@ -1,10 +1,10 @@
-import { ElementRef } from '@/types/default';
-import { useEffect } from 'react';
+import { ElementRef } from "@/types/default";
+import { useEffect } from "react";
 
 function useEventListener<EventType extends keyof HTMLElementEventMap>(
   event: EventType,
   handler: (e: HTMLElementEventMap[EventType]) => void,
-  elementRef: ElementRef,
+  elementRef: ElementRef
 ) {
   useEffect(() => {
     const ref = elementRef.current;
@@ -15,4 +15,4 @@ function useEventListener<EventType extends keyof HTMLElementEventMap>(
   }, []);
 }
 
-export { useEventListener };
+export default useEventListener;

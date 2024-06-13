@@ -1,15 +1,15 @@
-import { COLORS } from '@/styles/color';
-import { AlertProps } from '@/types/alert';
+import { COLORS } from "@/styles/color";
+import { AlertFunctionProps } from "@/types/alert";
 
-function AlertColor({ status }: AlertProps) {
+function AlertColor({ status }: AlertFunctionProps) {
   switch (status) {
-    case 'success':
+    case "success":
       return COLORS.SUCCESS;
-    case 'error':
+    case "error":
       return COLORS.ERROR;
-    case 'warning':
+    case "warning":
       return COLORS.WARNING;
-    case 'info':
+    case "info":
       return COLORS.INFO;
     default:
       return COLORS.PRIMARY;

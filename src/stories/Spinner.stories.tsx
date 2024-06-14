@@ -1,15 +1,17 @@
-import Spinner from '@/components/Spinner';
-import { COLORS } from '@/styles/color';
-import { SpinnerProps } from '@/types/spinner';
+import Spinner from "@/components/Spinner";
+import { COLORS } from "@/styles/color";
+import { SpinnerProps } from "@/types";
+
+import React from "react";
 
 const meta = {
-  title: 'Spinner',
+  title: "Spinner",
   args: {
-    size: 'sm',
-    thickness: '2',
+    size: "sm",
+    thickness: "2",
     color: COLORS.BLACK,
-    emptyColor: 'transparent',
-    speed: '1',
+    emptyColor: "transparent",
+    speed: "1",
   },
   component: Spinner,
 };

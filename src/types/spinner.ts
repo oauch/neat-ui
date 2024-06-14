@@ -1,5 +1,4 @@
-import { DefaultProps, SizeToken } from '@/types/default';
-import { ReactNode } from 'react';
+import { DefaultProps, SizeToken } from "@/types/default";
 
 interface SpinnerProps extends DefaultProps {
   size?: SizeToken;
@@ -7,7 +6,6 @@ interface SpinnerProps extends DefaultProps {
   color?: string;
   emptyColor?: string;
   speed?: number;
-  children?: ReactNode;
 }
 
 export type { SpinnerProps };

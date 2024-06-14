@@ -1,5 +1,5 @@
 import { COLORS } from "@/styles/color";
-import { SpinnerProps } from "@/types/spinner";
+import { SpinnerProps } from "@/types";
 
 import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";

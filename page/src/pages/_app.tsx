@@ -1,5 +1,15 @@
+import { DEFAULT_SEO } from "@/constants/metadata";
+import "@/styles/globals.css";
+import { DefaultSeo } from "next-seo";
 import type { AppProps } from "next/app";
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
-}
+const App = ({ Component, pageProps }: AppProps) => {
+  return (
+    <>
+      <DefaultSeo {...DEFAULT_SEO} />
+      <Component {...pageProps} />
+    </>
+  );
+};
+
+export default App;

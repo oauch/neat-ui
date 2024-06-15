@@ -48,6 +48,14 @@ const config = {
     url(),
     svgr(),
   ],
+  external: [
+    "react",
+    "react-dom",
+    "react/jsx-runtime",
+    "@emotion/react",
+    "@emotion/css",
+    "@emotion/styled",
+  ],
 };
 
 export default config;

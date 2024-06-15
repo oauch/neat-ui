@@ -1,4 +1,5 @@
-export const TITLE = "Neat UI";
+import { TITLE } from "@/constants/common";
+
 const DESCRIPTION = "Just Neat and Simple React UI";
 const URL = "http://neat-ui.com";
 const SITE_IMG = "";

@@ -1,4 +1,4 @@
-import { TITLE } from "@/constants/metadata";
+import { TITLE } from "@/constants/common";
 import { NextSeo } from "next-seo";
 import { useMemo } from "react";
 

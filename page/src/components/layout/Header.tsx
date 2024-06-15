@@ -42,7 +42,8 @@ const Wrapper = styled.nav`
   align-items: center;
   padding: 15px;
   border-bottom: 1px solid ${COLORS.LightGray};
-  backdrop-filter: blur(1px);
+  backdrop-filter: blur(3px);
+  z-index: 5;
 `;
 
 const Version = styled.div`

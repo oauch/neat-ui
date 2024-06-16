@@ -1,5 +1,5 @@
+import IconLink from "@/components/common/IconLink";
 import Text from "@/components/common/Text";
-import IconLink from "@/components/layout/IconLink";
 import { TITLE } from "@/constants/common";
 import { GITHUB, NPM } from "@/constants/url";
 import useNpmVersion from "@/hooks/useNpmVersion";

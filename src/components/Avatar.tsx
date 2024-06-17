@@ -35,6 +35,10 @@ function Avatar({
 export default Avatar;
 
 const Wrapper = styled.div<AvatarProps>`
+  &:first-of-type {
+    position: relative;
+  }
+
   ${({ max, index }) => {
     return (
       max !== undefined &&

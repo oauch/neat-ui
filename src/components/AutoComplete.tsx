@@ -1,3 +1,4 @@
+import { COLORS } from "@/styles/color";
 import { Options, SelectProps } from "@/types/autoComplete";
 
 import styled from "@emotion/styled";
@@ -10,6 +11,7 @@ import React, {
   useRef,
   useState,
 } from "react";
+import { IoIosArrowDown } from "react-icons/io";
 
 const EMPTY_VALUE = [{ index: "404", value: "No Options." }];
 
@@ -35,7 +37,7 @@ function AutoComplete(props: SelectProps) {
    * @name  handleOpen
    * @description 옵션을 오픈하는 함수
    */
-  const handleOpen = (e: MouseEvent<HTMLInputElement | HTMLButtonElement>) => {
+  const handleOpen = (e: MouseEvent<HTMLInputElement | SVGElement>) => {
     e.preventDefault();
     setIsOpen((prev) => !prev);
     if (isOpen === false && inputRef.current !== null) {
@@ -301,16 +303,12 @@ const Input = styled.input`
   }
 `;
 
-const Button = styled.button<{ isOpen: boolean }>`
+const Button = styled(IoIosArrowDown)<{ isOpen: boolean }>`
   width: 16px;
   height: 16px;
   position: absolute;
   right: 5px;
-  bottom: 8px;
-
-  background-image: url("../icons/ArrowDropdown.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  bottom: 7px;
 
   cursor: pointer;
   transform: ${({ isOpen }) =>
@@ -334,6 +332,8 @@ const Items = styled.ul<{ isElementAtBottom: boolean }>`
   border: 1px solid #2e8b57;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   overflow-y: auto;
+
+  z-index: 10;
 `;
 
 const Item = styled.li<{
@@ -347,7 +347,7 @@ const Item = styled.li<{
   background-color: ${({ index, selectedIndex, prevSelectedIndex }) => {
     if (index === selectedIndex) return `rgba(0, 0, 0, 0.1)`;
     else if (index === prevSelectedIndex) return `#2e8b5696`;
-    else return "transparent";
+    else return COLORS.WHITE;
   }};
 
   &:hover {

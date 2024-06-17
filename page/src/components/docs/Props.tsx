@@ -10,8 +10,8 @@ const Props = ({ props }: { props: ComponentProps[] }) => {
     <Table>
       <thead>
         <tr>
-          {TITLE.map((val) => (
-            <Th>
+          {TITLE.map((val, index) => (
+            <Th key={index}>
               <Text fs={1.5} fw={600}>
                 {val}
               </Text>

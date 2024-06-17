@@ -23,13 +23,7 @@ const ImportSource = ({ imports, src }: ImportSourceProps) => {
         </Text>
         <Import>
           {StringCovert(imports)}
-          <CopyButton
-            onCopy={onCopy}
-            isCopy={isCopy}
-            top={4}
-            right={3}
-            fs={1.5}
-          />
+          <CopyButton onCopy={onCopy} isCopy={isCopy} fs={1.5} />
         </Import>
         <IconLink href={URLCovert(src)} Icon={FaGithub} size={30} />
       </Flex>

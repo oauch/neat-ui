@@ -1,16 +1,20 @@
 import styled from "@emotion/styled";
 
 type CopyButtonProps = {
+  types?: "import" | "code";
   onCopy?: () => void;
   isCopy?: boolean;
-  top?: number;
-  right?: number;
   fs?: number;
 };
 
-const CopyButton = ({ onCopy, isCopy, ...props }: CopyButtonProps) => {
+const CopyButton = ({
+  types = "import",
+  onCopy,
+  isCopy,
+  ...props
+}: CopyButtonProps) => {
   return (
-    <Button onClick={onCopy} {...props}>
+    <Button types={types} onClick={onCopy} {...props}>
       {isCopy ? "✅" : "📝"}
     </Button>
   );
@@ -19,5 +23,13 @@ const CopyButton = ({ onCopy, isCopy, ...props }: CopyButtonProps) => {
 export default CopyButton;
 
 const Button = styled.button<CopyButtonProps>`
+  ${({ types }) => {
+    return (
+      types === "code" &&
+      `position: absolute;
+       top: 8px;
+       right: 8px;`
+    );
+  }}
   font-size: ${({ fs }) => fs ?? 2.5}rem;
 `;

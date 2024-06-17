@@ -28,7 +28,7 @@ const CodeBlock = ({ code }: CodeBlockProp) => {
       >
         {code}
       </SyntaxHighlighter>
-      <CopyButton onCopy={onCopy} isCopy={isCopy} />
+      <CopyButton types="code" onCopy={onCopy} isCopy={isCopy} />
     </Wrapper>
   );
 };

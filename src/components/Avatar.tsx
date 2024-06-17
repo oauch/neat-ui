@@ -1,12 +1,33 @@
 import { SIZE_MAP } from "@/constants/avatarSizeMap";
+import { COLORS } from "@/styles/color";
 import { AvatarProps } from "@/types/avatar";
 import styled from "@emotion/styled";
 import React from "react";
+import { RxAvatar } from "react-icons/rx";
 
-function Avatar({ index, max, name, imgUrl, ...props }: AvatarProps) {
+function Avatar({
+  index,
+  max,
+  name,
+  imgUrl,
+  icon: Icon,
+  ...props
+}: AvatarProps) {
   return (
     <Wrapper index={index} max={max}>
-      <Image src={imgUrl} alt={name} {...props} />
+      {Icon && Icon}
+      {imgUrl && <Image src={imgUrl} alt={name} {...props} />}
+      {!Icon && !imgUrl && (
+        <RxAvatar
+          style={{
+            backgroundColor: "#2E8B57",
+            borderRadius: "9999px",
+            borderStyle: "hidden",
+          }}
+          color={COLORS.WHITE}
+          size={42 ?? props.size}
+        />
+      )}
     </Wrapper>
   );
 }

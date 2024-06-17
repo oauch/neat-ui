@@ -67,4 +67,8 @@ const CountAvatar = styled.div<AvatarGroupProps & { countNumber: number }>`
   background-color: ${COLORS.PRIMARY};
 
   z-index: ${({ countNumber }) => countNumber};
+
+  &:first-of-type {
+    position: relative;
+  }
 `;

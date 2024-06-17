@@ -23,6 +23,7 @@ const CodeBlock = ({ code }: CodeBlockProp) => {
           borderRadius: "10px",
           lineHeight: 1.6,
           fontSize: "1.6rem",
+          overflowX: "scroll",
         }}
       >
         {code}

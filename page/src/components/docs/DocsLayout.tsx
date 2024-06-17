@@ -27,5 +27,5 @@ const Wrapper = styled.section`
 `;
 
 const Content = styled.div`
-  width: 100%;
+  width: 80%;
 `;

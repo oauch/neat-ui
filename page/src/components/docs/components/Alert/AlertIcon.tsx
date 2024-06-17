@@ -25,7 +25,7 @@ App.code = `import { Alert } from "@oauch/neat-ui";
 const App = () => {
   return (
     <div>
-       <Alert customIcon="💻">
+      <Alert customIcon="💻">
         Custom Icon
       </Alert>
     </div>

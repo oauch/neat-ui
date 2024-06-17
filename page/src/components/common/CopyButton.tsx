@@ -19,8 +19,5 @@ const CopyButton = ({ onCopy, isCopy, ...props }: CopyButtonProps) => {
 export default CopyButton;
 
 const Button = styled.button<CopyButtonProps>`
-  position: absolute;
-  top: ${({ top }) => top ?? 5}px;
-  right: ${({ right }) => right ?? 10}px;
   font-size: ${({ fs }) => fs ?? 2.5}rem;
 `;

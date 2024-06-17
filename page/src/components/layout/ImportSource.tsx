@@ -47,9 +47,13 @@ const Wrapper = styled.div`
 `;
 
 const Import = styled.p`
+  display: flex;
+  align-items: center;
+  gap: 5px;
   position: relative;
-  padding: 5px 10px;
-  padding-right: 30px;
+  padding: 5px;
+  padding-left: 10px;
+
   font-size: 1.5rem;
   color: ${COLORS.White};
   border-radius: 10px;

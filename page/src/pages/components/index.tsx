@@ -1,7 +1,14 @@
-import DocsLayout from "@/components/docs/DocsLayout";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 const Components = () => {
-  return <DocsLayout>컴포넌트</DocsLayout>;
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push("/components/Alert");
+  }, []);
+
+  return;
 };
 
 export default Components;

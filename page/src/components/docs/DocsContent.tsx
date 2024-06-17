@@ -23,11 +23,11 @@ const DocsContent = ({
         <Text fs={1.8}>{description}</Text>
         <ImportSource imports={imports} src={src} />
         <ExampleWrapper>
-          <Text fs={2} fw={800}>
+          <Text fs={2.5} fw={800}>
             Examples
           </Text>
-          {examples.map((val) => (
-            <Example title={val.title} component={val.component} />
+          {examples.map(({ title, component }, index) => (
+            <Example key={index} title={title} component={component} />
           ))}
         </ExampleWrapper>
       </InWrapper>
@@ -49,5 +49,6 @@ const InWrapper = styled.div`
 `;
 
 const ExampleWrapper = styled.div`
+  width: 80%;
   margin-top: 80px;
 `;

@@ -43,7 +43,7 @@ const Wrapper = styled.nav`
   padding: 15px;
   border-bottom: 1px solid ${COLORS.LightGray};
   backdrop-filter: blur(3px);
-  z-index: 5;
+  z-index: 99999;
 `;
 
 const Version = styled.div`

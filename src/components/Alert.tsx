@@ -3,27 +3,23 @@ import { AlertProps } from "@/types/alert";
 import AlertBgColor from "@/utils/Alert/AlertBgColor";
 import AlertFillColor from "@/utils/Alert/AlertFillColor";
 
-import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 function Alert({ status, customIcon, children, ...props }: AlertProps) {
-  const [show, setShow] = useState(true);
-  const [isAnimation, setIsAnimation] = useState(true);
-
   let icon = "";
   switch (status) {
     case "success":
       icon = "✅";
       break;
     case "error":
-      icon = "❎";
+      icon = "💡";
       break;
     case "warning":
       icon = "⚠️";
       break;
     case "info":
-      icon = "💡";
+      icon = "📝";
       break;
     default:
       icon = "🍞";
@@ -35,61 +31,23 @@ function Alert({ status, customIcon, children, ...props }: AlertProps) {
     icon = customIcon;
   }
 
-  useEffect(() => {
-    setTimeout(() => {
-      setIsAnimation(false);
-      setTimeout(() => {
-        setShow(false);
-      }, 500);
-    }, 5000);
-  }, []);
-
   return (
-    <>
-      {show && (
-        <Wrapper>
-          <AlertWrapper isAnimation={isAnimation} status={status} {...props}>
-            <IconWrapper>{icon}</IconWrapper>
-            {children}
-          </AlertWrapper>
-        </Wrapper>
-      )}
-    </>
+    <Wrapper>
+      <AlertWrapper status={status} {...props}>
+        <IconWrapper>{icon}</IconWrapper>
+        {children}
+      </AlertWrapper>
+    </Wrapper>
   );
 }
 
 export default Alert;
 
-const showAlert = keyframes`
-  0% {
-    opacity: 0;
-    transform: translateY(-50px)
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0)
-  }
-`;
-
-const hideAlert = keyframes`
-  0% {
-    opacity: 1;
-    transform: translateY(0)
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-50px)
-  }
-`;
-
 const Wrapper = styled.div`
-  position: fixed;
-  top: 10px;
-  left: 50%;
-  transform: translate(-50%, 0);
+  z-index: 9999;
 `;
 
-const AlertWrapper = styled.div<AlertProps & { isAnimation: boolean }>`
+const AlertWrapper = styled.div<AlertProps>`
   width: fit-content;
   height: fit-content;
 
@@ -113,11 +71,6 @@ const AlertWrapper = styled.div<AlertProps & { isAnimation: boolean }>`
       return "transparent";
     }};
   border-radius: 5px;
-
-  opacity: ${({ isAnimation }) => (isAnimation ? 1 : 0)};
-  animation: ${({ isAnimation }) => (isAnimation ? showAlert : hideAlert)} 0.7s
-    ease-in-out;
-  animation-fill-mode: forwards;
 `;
 
 const IconWrapper = styled.div`

@@ -1,3 +1,4 @@
+import CopyButton from "@/components/common/CopyButton";
 import { COLORS } from "@/styles/colors";
 import styled from "@emotion/styled";
 import { useClipBoard } from "@oauch/neat-ui";
@@ -26,7 +27,7 @@ const CodeBlock = ({ code }: CodeBlockProp) => {
       >
         {code}
       </SyntaxHighlighter>
-      <CopyButton onClick={onCopy}>{isCopy ? "✅" : "📝"}</CopyButton>
+      <CopyButton onCopy={onCopy} isCopy={isCopy} />
     </Wrapper>
   );
 };
@@ -35,11 +36,4 @@ export default CodeBlock;
 
 const Wrapper = styled.div`
   position: relative;
-`;
-
-const CopyButton = styled.button`
-  position: absolute;
-  top: 5px;
-  right: 10px;
-  font-size: 2.5rem;
 `;

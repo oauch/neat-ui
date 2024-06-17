@@ -2,7 +2,7 @@ import { COLORS } from "@/styles/colors";
 import styled from "@emotion/styled";
 import { useClipBoard } from "@oauch/neat-ui";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { googlecode } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { googlecode } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
 type CodeBlockProp = {
   code: string;

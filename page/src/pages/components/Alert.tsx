@@ -1,5 +1,5 @@
-import AlertIcon from "@/components/docs/components/AlertIcon";
-import AlertStatus from "@/components/docs/components/AlertStatus";
+import AlertIcon from "@/components/docs/components/Alert/AlertIcon";
+import AlertStatus from "@/components/docs/components/Alert/AlertStatus";
 import DocsContent from "@/components/docs/DocsContent";
 import DocsLayout from "@/components/docs/DocsLayout";
 

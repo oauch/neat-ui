@@ -18,7 +18,7 @@ const CodeBlock = ({ code }: CodeBlockProp) => {
         customStyle={{
           marginTop: "20px",
           padding: "20px",
-          border: `1px solid ${COLORS.SeaGreen}`,
+          border: `1px solid ${COLORS.LightGray}`,
           borderRadius: "10px",
           lineHeight: 1.6,
           fontSize: "1.6rem",

@@ -1,5 +1,6 @@
 import Text from "@/components/common/Text";
 import Example from "@/components/docs/Example";
+import Props from "@/components/docs/Props";
 import Head from "@/components/layout/Head";
 import ImportSource from "@/components/layout/ImportSource";
 import { COLORS } from "@/styles/colors";
@@ -12,6 +13,7 @@ const DocsContent = ({
   imports,
   src,
   examples,
+  props,
 }: DocsContentProps) => {
   return (
     <Wrapper>
@@ -29,6 +31,7 @@ const DocsContent = ({
           {examples.map(({ title, component }, index) => (
             <Example key={index} title={title} component={component} />
           ))}
+          <Props props={props} />
         </ExampleWrapper>
       </InWrapper>
     </Wrapper>

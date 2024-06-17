@@ -11,8 +11,19 @@ const App = () => {
         padding: "10px",
       }}
     >
-      <Alert customIcon="💻" style={{ width: "100%", fontSize: "1.8rem" }}>
-        Custom Icon
+      <Alert
+        status="success"
+        variants="fill"
+        style={{ width: "100%", fontSize: "1.8rem" }}
+      >
+        success
+      </Alert>
+      <Alert
+        status="info"
+        variants="outline"
+        style={{ width: "100%", fontSize: "1.8rem" }}
+      >
+        info
       </Alert>
     </div>
   );
@@ -25,9 +36,8 @@ App.code = `import { Alert } from "@oauch/neat-ui";
 const App = () => {
   return (
     <div>
-       <Alert customIcon="💻">
-        Custom Icon
-      </Alert>
+      <Alert status="success" variants="fill">success</Alert>
+      <Alert status="info" variants="outline">info</Alert>
     </div>
   );
 };

@@ -2,10 +2,11 @@ import Text from "@/components/common/Text";
 import { DOCS_LIST } from "@/constants/docs";
 import { COLORS } from "@/styles/colors";
 import styled from "@emotion/styled";
-
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const SideBar = () => {
+  const router = useRouter();
   return (
     <Wrapper>
       {DOCS_LIST.map((val) => (
@@ -16,7 +17,9 @@ const SideBar = () => {
           <Items>
             {val.list.map((val) => (
               <Link key={val.key} href={`/components/${val.name}`}>
-                <Item>{val.name}</Item>
+                <Item key={val.key} active={router.pathname.includes(val.name)}>
+                  {val.name}
+                </Item>
               </Link>
             ))}
           </Items>
@@ -50,11 +53,11 @@ const Items = styled.ul`
   padding-left: 10px;
 `;
 
-const Item = styled.li`
+const Item = styled.li<{ active: boolean }>`
   width: 100%;
   font-size: 1.5rem;
-  font-weight: 500;
-  color: ${COLORS.SlateGray};
+  font-weight: 600;
+  color: ${({ active }) => (active ? COLORS.SeaGreen : COLORS.SlateGray)};
   padding: 10px;
   border-radius: 10px;
 
@@ -63,10 +66,5 @@ const Item = styled.li`
 
   &:hover {
     background-color: rgba(0, 0, 0, 0.2);
-  }
-
-  &:active {
-    color: ${COLORS.SeaGreen};
-    background-color: transparent;
   }
 `;

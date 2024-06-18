@@ -1,12 +1,13 @@
 import styled from "@emotion/styled";
-import { ReactNode } from "react";
+import { CSSProperties, ReactNode } from "react";
 
 type ComponentWrapperProps = {
   children: ReactNode;
+  style?: CSSProperties;
 };
 
-const ComponentWrapper = ({ children }: ComponentWrapperProps) => {
-  return <Wrapper>{children}</Wrapper>;
+const ComponentWrapper = ({ children, style }: ComponentWrapperProps) => {
+  return <Wrapper style={style}>{children}</Wrapper>;
 };
 
 export default ComponentWrapper;

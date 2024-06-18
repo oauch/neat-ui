@@ -1,7 +1,7 @@
 import ComponentWrapper from "@/components/docs/ComponentWrapper";
 import { AutoComplete } from "@oauch/neat-ui";
 import { useState } from "react";
-import Top100Films from "../../../../public/top100Films.json";
+import Top100Films from "../../../../../public/top100Films.json";
 
 const App = () => {
   const [value, setValue] = useState("");

@@ -1,6 +1,6 @@
 import DocsContent from "@/components/docs/DocsContent";
 import DocsLayout from "@/components/docs/DocsLayout";
-import AutoCompleteOptions from "@/components/docs/components/AutoCompleteOptions";
+import AutoCompleteOptions from "@/components/docs/components/AutoComplete/AutoCompleteOptions";
 
 const AutoComplete = () => {
   return (

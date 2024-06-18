@@ -18,8 +18,8 @@ const meta = {
 
 export default meta;
 
-function Component({ children, ...props }: SpinnerProps) {
-  return <Spinner {...props}>{children}</Spinner>;
+function Component({ ...props }: SpinnerProps) {
+  return <Spinner {...props} />;
 }
 
 export const Spinner_ = {

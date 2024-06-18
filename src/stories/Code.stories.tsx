@@ -1,23 +1,24 @@
-import Code from '@/components/Code';
+import Code from "@/components/Code";
+import React from "react";
 
 const meta = {
-  title: 'Code',
+  title: "Code",
   component: Code,
 };
 
 export default meta;
 
-function Component() {
-  return (
-    <Code>{`return (
+const code = `return (
   <Wrapper color={color}>
     <InWrapper>
       <CodeText>{children}</CodeText>
       <CopyButton onClick={onCopy}>{isCopy ? '✅' : '📝'}</CopyButton>
     </InWrapper>
   </Wrapper>
-);`}</Code>
-  );
+);`;
+
+function Component() {
+  return <Code code={code} />;
 }
 
 export const Code_ = { render: Component };

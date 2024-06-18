@@ -1,40 +1,21 @@
-import styled from "@emotion/styled";
-
+import { SIZE_MAP } from "@/constants/chipSizeMap";
 import { COLORS } from "@/styles/color";
 import { ChipProps } from "@/types/chip";
+import styled from "@emotion/styled";
 import React, { forwardRef, useState } from "react";
 
-const SIZE_MAP = {
-  xs: {
-    width: 50,
-    height: 18,
-  },
-  sm: {
-    width: 60,
-    height: 24,
-  },
-  md: {
-    width: 90,
-    height: 28,
-  },
-  lg: {
-    width: 100,
-    height: 32,
-  },
-};
-
-const Chip = forwardRef(
-  ({ onClick, label, children, disabled, ...props }: ChipProps) => {
+const Chip = forwardRef<HTMLButtonElement, ChipProps>(
+  ({ onClick, label, children, disabled, ...props }, ref) => {
     const [isSelected, setIsSelected] = useState(false);
     return (
       <Wrapper
+        ref={ref}
         active={isSelected}
         onClick={() => {
           setIsSelected((prev) => !prev);
-          onClick?.();
         }}
         disabled={disabled}
-        arial-label={label ?? "chip"}
+        aria-label={label ?? "chip"}
         {...props}
       >
         {children}
@@ -50,11 +31,11 @@ const Wrapper = styled.button<ChipProps>`
   justify-content: center;
   align-items: center;
   border: 1px solid ${COLORS.DISABLED};
-  font-size: ${({ fontSize = 12 }) => fontSize}px;
-  padding: "8px 16px 8px 32px";
+  font-size: ${({ fs = 12 }) => fs}px;
+  padding: 8px 16px 8px 32px; // 문자열에서 숫자로 수정
   border-radius: 100rem;
 
-  ${({ size = "sm" }) => {
+  ${({ size = "md" }) => {
     const { width, height } = SIZE_MAP[size];
     return `
       width: ${width}px;
@@ -65,14 +46,11 @@ const Wrapper = styled.button<ChipProps>`
   background-color: ${({ colorTheme = COLORS.WHITE, active }) => {
     switch (colorTheme) {
       case "primary":
-        if (active) return COLORS.SKIN;
-        return COLORS.PRIMARY;
+        return active ? COLORS.SKIN : COLORS.PRIMARY;
       case "black":
-        if (active) return COLORS.BLACK;
-        return COLORS.BLACK_SUB;
+        return active ? COLORS.BLACK : COLORS.BLACK_SUB;
       case "white":
-        if (active) return COLORS.PRIMARY;
-        return COLORS.WHITE;
+        return active ? COLORS.PRIMARY : COLORS.WHITE;
       default:
         return colorTheme;
     }

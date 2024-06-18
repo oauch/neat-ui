@@ -1,26 +1,26 @@
-import { DefaultProps } from '@/types/default';
+import { DefaultProps } from "@/types/default";
 
 export type JustifyContentToken =
-  | 'center'
-  | 'end'
-  | 'start'
-  | 'around'
-  | 'between'
-  | 'evenly'
-  | 'stretch'
-  | 'normal';
+  | "center"
+  | "end"
+  | "start"
+  | "around"
+  | "between"
+  | "evenly"
+  | "stretch"
+  | "normal";
 
 export type AlignItemsToken =
-  | 'baseline'
-  | 'center'
-  | 'end'
-  | 'start'
-  | 'stretch'
-  | 'normal';
+  | "baseline"
+  | "center"
+  | "end"
+  | "start"
+  | "stretch"
+  | "normal";
 
-type FlexDirectionToken = 'column' | 'column-reverse' | 'row' | 'row-reverse';
+type FlexDirectionToken = "column" | "column-reverse" | "row" | "row-reverse";
 
-type FlexWrapToken = 'nowrap' | 'wrap' | 'wrap-reverse';
+type FlexWrapToken = "nowrap" | "wrap" | "wrap-reverse";
 
 interface FlexProps extends DefaultProps {
   direction?: FlexDirectionToken;
@@ -30,7 +30,7 @@ interface FlexProps extends DefaultProps {
   grow?: number;
   shrink?: number;
   basis?: string;
-  gap?: number | string;
+  gap?: number;
 }
 
 export type { FlexProps };

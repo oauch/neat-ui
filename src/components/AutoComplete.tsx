@@ -256,7 +256,7 @@ function AutoComplete(props: SelectProps) {
         onFocus={() => setIsOpen(true)}
         placeholder="Select Movie"
       />
-      <Button isOpen={isOpen} onMouseDown={(e) => handleOpen(e)} />
+      <Button isopen={isOpen.toString()} onMouseDown={(e) => handleOpen(e)} />
       {item && isOpen && (
         <Items ref={listRef} isElementAtBottom={isElementAtBottom}>
           {item.map((val, index) => (
@@ -280,7 +280,6 @@ export default AutoComplete;
 
 const Wrapper = styled.div`
   position: relative;
-  transition: all 1s ease-in-out;
 `;
 
 const Input = styled.input`
@@ -303,7 +302,7 @@ const Input = styled.input`
   }
 `;
 
-const Button = styled(IoIosArrowDown)<{ isOpen: boolean }>`
+const Button = styled(IoIosArrowDown)<{ isopen: string }>`
   width: 16px;
   height: 16px;
   position: absolute;
@@ -311,8 +310,8 @@ const Button = styled(IoIosArrowDown)<{ isOpen: boolean }>`
   bottom: 7px;
 
   cursor: pointer;
-  transform: ${({ isOpen }) =>
-    isOpen ? `scale(1, -1)` : `transform: scale(-1, 1);`};
+  transform: ${({ isopen }) =>
+    isopen === "true" ? `scale(1, -1)` : `transform: scale(-1, 1);`};
   transition: all 0.3s ease-in-out;
 
   &:hover {
@@ -345,12 +344,12 @@ const Item = styled.li<{
   padding: 5px;
 
   background-color: ${({ index, selectedIndex, prevSelectedIndex }) => {
-    if (index === selectedIndex) return `rgba(0, 0, 0, 0.1)`;
+    if (index === selectedIndex) return COLORS.LightGray;
     else if (index === prevSelectedIndex) return `#2e8b5696`;
     else return COLORS.WHITE;
   }};
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: ${COLORS.LightGray};
   }
 `;

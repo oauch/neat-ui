@@ -6,12 +6,12 @@ import React from "react";
 function Button({
   type = "button",
   onClick,
-  isDisabled = false,
+  disabled = false,
   children,
   ...props
 }: ButtonProps) {
   return (
-    <Wrapper type={type} onClick={onClick} disabled={isDisabled} {...props}>
+    <Wrapper type={type} onClick={onClick} disabled={disabled} {...props}>
       {children}
     </Wrapper>
   );
@@ -45,31 +45,16 @@ const Wrapper = styled.button<ButtonProps>`
     }
   }}px;
 
-  background-color: ${({ colorTheme = COLORS.PRIMARY }) => {
-    switch (colorTheme) {
-      case "primary":
-        return COLORS.PRIMARY;
-      case "black":
-        return COLORS.BLACK;
-      case "white":
-        return COLORS.WHITE;
-      default:
-        return colorTheme;
-    }
-  }};
-  color: ${({ colorTheme = "white" }) => {
-    return colorTheme === "primary" || colorTheme === "white"
-      ? COLORS.BLACK
-      : COLORS.WHITE;
-  }};
+  font-size: ${({ fs = 12 }) => fs}px;
+  font-weight: 600;
+  color: ${({ color = "white" }) => color};
 
   border: unset;
   border: 1px
     ${({ variants = "none" }) => (variants === "none" ? "none" : "solid")};
   border-radius: 10px;
 
-  font-size: ${({ fs = 12 }) => fs}px;
-  font-weight: 600;
+  background-color: ${({ bgColor = COLORS.PRIMARY }) => bgColor};
 
   cursor: pointer;
 
@@ -82,6 +67,7 @@ const Wrapper = styled.button<ButtonProps>`
 
   &:disabled {
     cursor: not-allowed;
+    pointer-events: none;
     background-color: rgba(0, 0, 0, 0.2);
     background-image: none;
   }

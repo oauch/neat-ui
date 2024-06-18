@@ -1,11 +1,12 @@
-import Alert from '@/components/Alert';
-import { AlertProps } from '@/types/alert';
+import Alert from "@/components/Alert";
+import { AlertProps } from "@/types/alert";
+import React from "react";
 
 const meta = {
-  title: 'Alert',
+  title: "Alert",
   args: {
-    status: 'success',
-    variants: 'fill',
+    status: "success",
+    variants: "fill",
   },
   component: Alert,
 };

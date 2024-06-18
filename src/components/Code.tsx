@@ -1,57 +1,49 @@
 import useClipBoard from "@/hooks/useClipBoard";
 import { COLORS } from "@/styles/color";
 import { PropsWithChildren } from "@/types/default";
+import SyntaxHighlighter from "react-syntax-highlighter";
 
 import styled from "@emotion/styled";
-import React from "react";
+import React, { forwardRef } from "react";
+import { googlecode } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
-function Code({ children }: PropsWithChildren) {
-  const { isCopy, onCopy } = useClipBoard(String(children));
+type CodeProp = {
+  code: string;
+};
+
+const Code = forwardRef<HTMLDivElement, CodeProp>(({ code }, ref) => {
+  const { isCopy, onCopy } = useClipBoard(String(code));
 
   return (
-    <Wrapper>
-      <InWrapper>
-        <CodeText>
-          <pre>
-            <code>{children}</code>
-          </pre>
-        </CodeText>
-        <CopyButton onClick={onCopy}>{isCopy ? "✅" : "📝"}</CopyButton>
-      </InWrapper>
+    <Wrapper ref={ref}>
+      <SyntaxHighlighter
+        language="typescript"
+        style={googlecode}
+        customStyle={{
+          marginTop: "20px",
+          padding: "20px",
+          border: `1px solid ${COLORS.LightGray}`,
+          borderRadius: "10px",
+          lineHeight: 1.6,
+          fontSize: "1.6rem",
+          overflowX: "scroll",
+        }}
+      >
+        {code}
+      </SyntaxHighlighter>
+      <CopyButton onClick={onCopy}>{isCopy ? "✅" : "📝"}</CopyButton>
     </Wrapper>
   );
-}
+});
 
 export default Code;
 
 const Wrapper = styled.div<PropsWithChildren>`
   position: relative;
-  width: fit-content;
-  padding: 8px;
-  padding-left: 10px;
-  padding-right: 70px;
-  border-radius: 5px;
-  font-size: 1rem;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: ${COLORS.WHITE};
-`;
-
-const InWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-const CodeText = styled.div`
-  white-space: pre-line;
-  line-height: 25px;
 `;
 
 const CopyButton = styled.button`
-  all: unset;
-  cursor: pointer;
   position: absolute;
-  top: 5px;
+  top: 8px;
   right: 8px;
 `;

@@ -35,6 +35,8 @@ const Label = styled.label<SwitchProps>`
         return 50;
       case "lg":
         return 75;
+      default:
+        return 50;
     }
   }}px;
   height: ${({ size = "md" }) => {
@@ -45,6 +47,8 @@ const Label = styled.label<SwitchProps>`
         return 25;
       case "lg":
         return 37;
+      default:
+        return 25;
     }
   }}px;
 `;
@@ -110,14 +114,7 @@ const Slider = styled.div<SwitchProps>`
           return 2.5;
       }
     }}px;
-    background-color: ${({ theme }) => {
-      switch (theme) {
-        case "primary":
-          return COLORS.SKIN;
-        case "black":
-          return COLORS.WHITE;
-      }
-    }};
+    background-color: ${COLORS.WHITE};
     transition: 0.4s;
     border-radius: 50%;
   }
@@ -138,13 +135,6 @@ const Slider = styled.div<SwitchProps>`
   }
 
   input:checked + & {
-    background-color: ${({ theme }) => {
-      switch (theme) {
-        case "primary":
-          return COLORS.T_SHIRTS;
-        case "black":
-          return COLORS.BLACK;
-      }
-    }};
+    background-color: ${({ bgColor = COLORS.PRIMARY }) => bgColor};
   }
 `;

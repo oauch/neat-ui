@@ -1,10 +1,11 @@
 export const COLORS = {
   // 기본 색상
-  PRIMARY: "#F0E7DB",
+  PRIMARY: "#2E8B57",
   BLACK: "#000",
   BLACK_SUB: "#2b2b2b",
   WHITE: "#FFF",
   GRAY: "#818181",
+  LightGray: "#D3D3D3",
   HOVER_TEXT: "#303134",
   DISABLED: "#eeeeee",
 

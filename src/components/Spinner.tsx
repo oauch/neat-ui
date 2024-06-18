@@ -1,3 +1,4 @@
+import { SIZE_MAP } from "@/constants/avatarSizeMap";
 import { COLORS } from "@/styles/color";
 import { SpinnerProps } from "@/types";
 
@@ -5,15 +6,7 @@ import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
 import React from "react";
 
-const SIZE = {
-  xs: 25,
-  sm: 30,
-  md: 40,
-  lg: 50,
-};
-
 const FONT_SIZE = {
-  xs: 12,
   sm: 20,
   md: 30,
   lg: 40,
@@ -38,13 +31,13 @@ const Wrapper = styled.div<SpinnerProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-  ${({ size = "sm" }) => {
+  ${({ size = "md" }) => {
     return `
-      width: ${SIZE[size]}px;
-      height: ${SIZE[size]}px;
+      width: ${SIZE_MAP[size]}px;
+      height: ${SIZE_MAP[size]}px;
     `;
   }}
-  font-size: ${({ size = "sm" }) => FONT_SIZE[size]}px;
+  font-size: ${({ size = "md" }) => FONT_SIZE[size]}px;
   ${({
     children,
     thickness = 2,

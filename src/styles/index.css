@@ -24,8 +24,7 @@ input:focus {
 }
 
 button {
-  border: 0;
-  background: transparent;
+  all: unset;
   cursor: pointer;
 }
 

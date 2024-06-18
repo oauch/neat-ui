@@ -1,4 +1,4 @@
-import { AutoComplete } from "@/components";
+import AutoComplete from "@/components/AutoComplete";
 import React, { useState } from "react";
 import Top100Films from "../public/top100Films.json";
 

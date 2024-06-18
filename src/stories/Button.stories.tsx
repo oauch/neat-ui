@@ -1,14 +1,15 @@
-import Button from '@/components/Button';
-import { ButtonProps } from '@/types/button';
+import Button from "@/components/Button";
+import { ButtonProps } from "@/types/button";
+import React from "react";
 
 const meta = {
-  title: 'Button',
+  title: "Button",
   args: {
-    type: 'button',
-    size: 'md',
+    type: "button",
+    size: "md",
     fs: 12,
-    colorTheme: 'primary',
-    variants: 'none',
+    colorTheme: "primary",
+    variants: "none",
     isDisabled: false,
   },
   component: Button,

@@ -10,6 +10,7 @@ import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import postcss from "rollup-plugin-postcss";
 import tscAlias from "rollup-plugin-tsc-alias";
 
+import json from "@rollup/plugin-json";
 import pkg from "./package.json";
 
 const extensions = [".js", ".jsx", ".ts", ".tsx"];
@@ -47,6 +48,7 @@ const config = {
     }),
     url(),
     svgr(),
+    json(),
   ],
   external: [
     "react",

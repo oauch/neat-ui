@@ -4,9 +4,8 @@ interface ChipProps extends DefaultProps {
   label?: string;
   size?: SizeToken;
   colorTheme?: ColorToken;
-  borderRadius?: string;
   active?: boolean;
-  fontSize?: number;
+  fs?: number;
   onClick?: () => void;
   disabled?: boolean;
 }

@@ -12,7 +12,6 @@ export const DOCS_LIST = [
       { key: "alert", name: "Alert", createdAt: "2024-04-17" },
       { key: "autoComplete", name: "AutoComplete", createdAt: "2024-05-14" },
       { key: "avatar", name: "Avatar", createdAt: "2024-04-20" },
-      { key: "avatarGroup", name: "AvatarGroup", createdAt: "2024-04-20" },
       { key: "button", name: "Button", createdAt: "2024-04-04" },
       { key: "chip", name: "Chip", createdAt: "2024-04-13" },
       { key: "code", name: "Code", createdAt: "2024-05-07" },

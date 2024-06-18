@@ -2,7 +2,15 @@ import { Alert } from "@oauch/neat-ui";
 
 const App = () => {
   return (
-    <div style={{ display: "flex", flexDirection: "column", flex: "1" }}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        flex: "1",
+        gap: "10px",
+        padding: "10px",
+      }}
+    >
       <Alert customIcon="💻" style={{ width: "100%", fontSize: "1.8rem" }}>
         Custom Icon
       </Alert>
@@ -17,7 +25,7 @@ App.code = `import { Alert } from "@oauch/neat-ui";
 const App = () => {
   return (
     <div>
-       <Alert customIcon="💻">
+      <Alert customIcon="💻">
         Custom Icon
       </Alert>
     </div>

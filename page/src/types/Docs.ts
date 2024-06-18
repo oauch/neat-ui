@@ -8,14 +8,24 @@ interface ExampleListItem {
   component: ExampleComponent;
 }
 
+interface ComponentProps {
+  name: string;
+  type: string[];
+  defaultVal: string;
+}
+
 interface DocsContentProps {
   name: string;
   description: string;
   imports: string[];
   src: string;
   examples: ExampleListItem[];
-  // apis: ComponentAPI[];
-  // typesData?: ComponentPropsType[];
+  props: ComponentProps[];
 }
 
-export type { DocsContentProps, ExampleComponent, ExampleListItem };
+export type {
+  ComponentProps,
+  DocsContentProps,
+  ExampleComponent,
+  ExampleListItem,
+};

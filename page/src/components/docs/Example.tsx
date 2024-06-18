@@ -28,7 +28,7 @@ const InWrapper = styled.div`
   display: flex;
   margin-top: 20px;
 
-  border: 1px solid ${COLORS.SeaGreen};
+  border: 1px solid ${COLORS.LightGray};
   border-radius: 5px;
   gap: 10px;
 `;

@@ -1,4 +1,5 @@
 import Chip from "@/components/Chip";
+import { COLORS } from "@/styles/color";
 import { ChipProps } from "@/types/chip";
 import React from "react";
 
@@ -6,7 +7,8 @@ const meta = {
   title: "Chip",
   args: {
     size: "md",
-    colorTheme: "primary",
+    bgColor: COLORS.PRIMARY,
+    color: COLORS.WHITE,
   },
   component: Chip,
 };

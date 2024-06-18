@@ -16,6 +16,6 @@ function Component() {
   );
 }
 
-export const Alert_ = {
+export const AutoComplete_ = {
   render: Component,
 };

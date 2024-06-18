@@ -1,9 +1,10 @@
-import { ColorToken, DefaultProps, SizeToken } from "@/types/default";
+import { DefaultProps, SizeToken } from "@/types/default";
 
 interface ChipProps extends DefaultProps {
   label?: string;
   size?: SizeToken;
-  colorTheme?: ColorToken;
+  bgColor?: string;
+  color?: string;
   active?: boolean;
   fs?: number;
   onClick?: () => void;

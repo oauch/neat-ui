@@ -32,7 +32,7 @@ const Wrapper = styled.button<ChipProps>`
   align-items: center;
   border: 1px solid ${COLORS.DISABLED};
   font-size: ${({ fs = 12 }) => fs}px;
-  padding: 8px 16px 8px 32px; // 문자열에서 숫자로 수정
+  padding: 8px 16px;
   border-radius: 100rem;
 
   ${({ size = "md" }) => {
@@ -43,24 +43,8 @@ const Wrapper = styled.button<ChipProps>`
     `;
   }}
 
-  background-color: ${({ colorTheme = COLORS.WHITE, active }) => {
-    switch (colorTheme) {
-      case "primary":
-        return active ? COLORS.SKIN : COLORS.PRIMARY;
-      case "black":
-        return active ? COLORS.BLACK : COLORS.BLACK_SUB;
-      case "white":
-        return active ? COLORS.PRIMARY : COLORS.WHITE;
-      default:
-        return colorTheme;
-    }
-  }};
-
-  color: ${({ colorTheme = "white" }) => {
-    return colorTheme === "primary" || colorTheme === "white"
-      ? COLORS.BLACK
-      : COLORS.WHITE;
-  }};
+  color: ${({ color = "white" }) => color};
+  background-color: ${({ bgColor = COLORS.PRIMARY }) => bgColor};
 
   &:disabled {
     cursor: not-allowed;
@@ -70,18 +54,7 @@ const Wrapper = styled.button<ChipProps>`
 
   &:hover:not(:disabled) {
     transition: all 0.15s ease-in-out;
-    background-color: ${({ colorTheme }) => {
-      switch (colorTheme) {
-        case "primary":
-          return COLORS.SKIN;
-        case "black":
-          return COLORS.BLACK_SUB;
-        case "white":
-          return COLORS.PRIMARY;
-        default:
-          return colorTheme;
-      }
-    }};
+    background-color: ${({ bgColor = COLORS.PRIMARY }) => bgColor};
     transition: 0.4s;
     border-color: ${COLORS.BLACK};
   }

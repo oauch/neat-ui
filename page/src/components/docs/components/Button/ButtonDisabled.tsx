@@ -1,13 +1,11 @@
 import ComponentWrapper from "@/components/docs/ComponentWrapper";
-import { Spinner } from "@oauch/neat-ui";
+import { Button } from "@oauch/neat-ui";
 
 const App = () => {
   return (
     <ComponentWrapper style={{ display: "flex", gap: "10px" }}>
-      <Spinner />
-      <Spinner thickness={3} />
-      <Spinner thickness={4} />
-      <Spinner thickness={5} />
+      <Button disabled={true}>Disabled</Button>
+      <Button disabled={false}>Not Disabled</Button>
     </ComponentWrapper>
   );
 };
@@ -15,15 +13,13 @@ const App = () => {
 export default App;
 
 App.code = `import ComponentWrapper from "@/components/docs/ComponentWrapper";
-import { Chip } from "@oauch/neat-ui";
+import { Button } from "@oauch/neat-ui";
 
 const App = () => {
   return (
     <div>
-      <Spinner />
-      <Spinner thickness={2} />
-      <Spinner thickness={3} />
-      <Spinner thickness={4} />
+      <Button disabled={true}>Disabled</Button>
+      <Button disabled={false}>Not Disabled</Button>
     </div>
   );
 };

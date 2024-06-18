@@ -1,11 +1,13 @@
 import ComponentWrapper from "@/components/docs/ComponentWrapper";
-import { Button } from "@oauch/neat-ui";
+import { COLORS } from "@/styles/colors";
+import { Chip } from "@oauch/neat-ui";
 
 const App = () => {
   return (
     <ComponentWrapper style={{ display: "flex", gap: "10px" }}>
-      <Button isDisabled={true}>Disabled</Button>
-      <Button isDisabled={false}>Not Disabled</Button>
+      <Chip>Chip</Chip>
+      <Chip color={COLORS.Red}>Chip</Chip>
+      <Chip color={COLORS.Blue}>Chip</Chip>
     </ComponentWrapper>
   );
 };
@@ -13,13 +15,14 @@ const App = () => {
 export default App;
 
 App.code = `import ComponentWrapper from "@/components/docs/ComponentWrapper";
-import { Button } from "@oauch/neat-ui";
+import { Chip } from "@oauch/neat-ui";
 
 const App = () => {
   return (
     <div>
-      <Button isDisabled={true}>Disabled</Button>
-      <Button isDisabled={false}>Not Disabled</Button>
+      <Chip>Chip</Chip>
+      <Chip color="#FF0000">Chip</Chip>
+      <Chip color="#0000FF">Chip</Chip>
     </div>
   );
 };

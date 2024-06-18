@@ -1,12 +1,15 @@
 import ComponentWrapper from "@/components/docs/ComponentWrapper";
+import { COLORS } from "@/styles/colors";
 import { Chip } from "@oauch/neat-ui";
 
 const App = () => {
   return (
     <ComponentWrapper style={{ display: "flex", gap: "10px" }}>
-      <Chip borderRadius="5">Chip</Chip>
-      <Chip borderRadius="10">Chip</Chip>
-      <Chip borderRadius="20">Chip</Chip>
+      <Chip>Chip</Chip>
+      <Chip bgColor={COLORS.Black}>Chip</Chip>
+      <Chip bgColor={COLORS.White} color={COLORS.Black}>
+        Chip
+      </Chip>
     </ComponentWrapper>
   );
 };
@@ -19,9 +22,9 @@ import { Chip } from "@oauch/neat-ui";
 const App = () => {
   return (
     <div>
-      <Chip borderRadius="5">Chip</Chip>
-      <Chip borderRadius="10">Chip</Chip>
-      <Chip borderRadius="20">Chip</Chip>
+      <Chip>Chip</Chip>
+      <Chip bgColor="#000">Chip</Chip>
+      <Chip bgColor="#fff" color="#000">Chip</Chip>
     </div>
   );
 };

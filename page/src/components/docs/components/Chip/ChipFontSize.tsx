@@ -4,8 +4,8 @@ import { Chip } from "@oauch/neat-ui";
 const App = () => {
   return (
     <ComponentWrapper style={{ display: "flex", gap: "10px" }}>
-      <Chip fontSize={12}>Chip</Chip>
-      <Chip fontSize={20}>Chip</Chip>
+      <Chip fs={12}>Chip</Chip>
+      <Chip fs={20}>Chip</Chip>
     </ComponentWrapper>
   );
 };

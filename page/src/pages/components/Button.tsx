@@ -1,8 +1,11 @@
 import DocsContent from "@/components/docs/DocsContent";
 import DocsLayout from "@/components/docs/DocsLayout";
-import ButtonColorTheme from "@/components/docs/components/Button/ButtonColorTheme";
-import ButtonFs from "@/components/docs/components/Button/ButtonFs";
-import ButtonIsDisabled from "@/components/docs/components/Button/ButtonIsDisabled";
+import ButtonBgColor from "@/components/docs/components/Button/ButtonBgColor";
+import ButtonColor from "@/components/docs/components/Button/ButtonColor";
+
+import ButtonDisabled from "@/components/docs/components/Button/ButtonDisabled";
+import ButtonFontSize from "@/components/docs/components/Button/ButtonFontSize";
+
 import ButtonSize from "@/components/docs/components/Button/ButtonSize";
 import ButtonVariants from "@/components/docs/components/Button/ButtonVariants";
 
@@ -16,10 +19,11 @@ const Button = () => {
         src={"Button"}
         examples={[
           { title: "size", component: ButtonSize },
-          { title: "font-size", component: ButtonFs },
-          { title: "colorTheme", component: ButtonColorTheme },
+          { title: "font-size", component: ButtonFontSize },
+          { title: "bgColor", component: ButtonBgColor },
+          { title: "color", component: ButtonColor },
           { title: "variants", component: ButtonVariants },
-          { title: "isDisabled", component: ButtonIsDisabled },
+          { title: "disabled", component: ButtonDisabled },
         ]}
         props={[
           {

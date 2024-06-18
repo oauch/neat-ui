@@ -14,7 +14,6 @@ export const DOCS_LIST = [
       { key: "avatar", name: "Avatar", createdAt: "2024-04-20" },
       { key: "button", name: "Button", createdAt: "2024-04-04" },
       { key: "chip", name: "Chip", createdAt: "2024-04-13" },
-      { key: "code", name: "Code", createdAt: "2024-05-07" },
       { key: "flex", name: "Flex", createdAt: "2024-05-03" },
       { key: "spinner", name: "Spinner", createdAt: "2024-04-17" },
       { key: "switch", name: "Switch", createdAt: "2024-04-11" },

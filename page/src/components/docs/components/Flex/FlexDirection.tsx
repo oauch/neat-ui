@@ -1,8 +1,9 @@
+import ComponentWrapper from "@/components/docs/ComponentWrapper";
 import { Button, Flex } from "@oauch/neat-ui";
 
 const App = () => {
   return (
-    <>
+    <ComponentWrapper style={{ display: "flex", gap: "10px" }}>
       <Flex direction="row">
         <Button>Button 1</Button>
         <Button>Button 2</Button>
@@ -19,7 +20,7 @@ const App = () => {
         <Button>Button 1</Button>
         <Button>Button 2</Button>
       </Flex>
-    </>
+    </ComponentWrapper>
   );
 };
 

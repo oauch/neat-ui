@@ -57,12 +57,14 @@ const Item = styled.li<{ active: boolean }>`
   width: 100%;
   font-size: 1.5rem;
   font-weight: 600;
-  color: ${({ active }) => (active ? COLORS.SeaGreen : COLORS.SlateGray)};
   padding: 10px;
   border-radius: 10px;
 
   transition: all 0.2s ease-in-out;
   cursor: pointer;
+
+  color: ${({ active }) => (active ? COLORS.SeaGreen : COLORS.SlateGray)};
+  background-color: ${({ active }) => active && "rgba(0, 0, 0, 0.08)"};
 
   &:hover {
     background-color: rgba(0, 0, 0, 0.2);

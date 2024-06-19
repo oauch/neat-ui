@@ -26,7 +26,7 @@ const Spinner = () => {
         props={[
           {
             name: "size",
-            type: ["xs", "sm", "md", "lg"],
+            type: ["sm", "md", "lg"],
             defaultVal: "md",
           },
           {

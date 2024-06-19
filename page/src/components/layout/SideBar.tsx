@@ -7,6 +7,9 @@ import { useRouter } from "next/router";
 
 const SideBar = () => {
   const router = useRouter();
+  const keySeparation = (key: string, name: string) => {
+    return key === "components" ? `/components/${name}` : `/hooks/${name}`;
+  };
   return (
     <Wrapper>
       {DOCS_LIST.map((val) => (
@@ -15,10 +18,13 @@ const SideBar = () => {
             {val.name}
           </Text>
           <Items>
-            {val.list.map((val) => (
-              <Link key={val.key} href={`/components/${val.name}`}>
-                <Item key={val.key} active={router.pathname.includes(val.name)}>
-                  {val.name}
+            {val.list.map((item) => (
+              <Link key={item.key} href={keySeparation(val.key, item.name)}>
+                <Item
+                  key={item.key}
+                  active={router.pathname.includes(item.name)}
+                >
+                  {item.name}
                 </Item>
               </Link>
             ))}

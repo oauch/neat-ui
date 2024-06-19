@@ -15,7 +15,7 @@ function Switch({ onClick, ...props }: SwitchProps) {
         checked={isBoolean}
         onChange={toggle}
         onClick={onClick}
-        disabled={props.isDisabled}
+        disabled={props.disabled}
       />
       <Slider {...props} />
     </Label>
@@ -30,7 +30,7 @@ const Label = styled.label<SwitchProps>`
   width: ${({ size = "md" }) => {
     switch (size) {
       case "sm":
-        return 30;
+        return 35;
       case "md":
         return 50;
       case "lg":
@@ -42,13 +42,13 @@ const Label = styled.label<SwitchProps>`
   height: ${({ size = "md" }) => {
     switch (size) {
       case "sm":
-        return 18;
+        return 20;
       case "md":
-        return 25;
+        return 28;
       case "lg":
-        return 37;
+        return 40;
       default:
-        return 25;
+        return 28;
     }
   }}px;
 `;
@@ -67,9 +67,8 @@ const Slider = styled.div<SwitchProps>`
   transition: 0.4s;
   border-radius: 40px;
 
-  opacity: ${({ isDisabled = false }) => (isDisabled ? 0.4 : 1)};
-  cursor: ${({ isDisabled = false }) =>
-    isDisabled ? "not-allowed" : "pointer"};
+  opacity: ${({ disabled = false }) => (disabled ? 0.4 : 1)};
+  cursor: ${({ disabled = false }) => (disabled ? "not-allowed" : "pointer")};
 
   &::before {
     content: "";
@@ -97,21 +96,23 @@ const Slider = styled.div<SwitchProps>`
     left: ${({ size = "md" }) => {
       switch (size) {
         case "sm":
-          return 2;
-        case "md":
           return 3;
+        case "md":
+          return 4;
         case "lg":
-          return 5;
+          return 6;
       }
     }}px;
     bottom: ${({ size = "md" }) => {
       switch (size) {
         case "sm":
-          return 1.5;
+          return 2.5;
         case "md":
-          return 2.5;
+          return 3.8;
         case "lg":
-          return 2.5;
+          return 4;
+        default:
+          return 3.8;
       }
     }}px;
     background-color: ${COLORS.WHITE};
@@ -124,11 +125,11 @@ const Slider = styled.div<SwitchProps>`
       ${({ size = "md" }) => {
         switch (size) {
           case "sm":
-            return 11;
+            return 14;
           case "md":
-            return 24;
+            return 22;
           case "lg":
-            return 33;
+            return 31;
         }
       }}px
     );

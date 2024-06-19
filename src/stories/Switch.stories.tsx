@@ -8,7 +8,7 @@ const meta = {
   args: {
     size: "md",
     bgColor: COLORS.PRIMARY,
-    isDisabled: false,
+    disabled: false,
   },
   component: Switch,
 };

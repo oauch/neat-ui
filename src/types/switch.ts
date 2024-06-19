@@ -4,7 +4,7 @@ interface SwitchProps extends DefaultProps {
   size?: "sm" | "md" | "lg";
   bgColor?: string;
   onClick?: () => void;
-  isDisabled?: boolean;
+  disabled?: boolean;
 }
 
 export type { SwitchProps };

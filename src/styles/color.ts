@@ -7,7 +7,7 @@ export const COLORS = {
   GRAY: "#818181",
   LightGray: "#D3D3D3",
   HOVER_TEXT: "#303134",
-  DISABLED: "#eeeeee",
+  DISABLED: " rgba(0, 0, 0, 0.2);",
 
   SKIN: "#F5DDC2",
   T_SHIRTS: "#01641D",

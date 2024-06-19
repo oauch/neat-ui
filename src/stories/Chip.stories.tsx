@@ -9,6 +9,7 @@ const meta = {
     size: "md",
     bgColor: COLORS.PRIMARY,
     color: COLORS.WHITE,
+    disabled: false,
   },
   component: Chip,
 };

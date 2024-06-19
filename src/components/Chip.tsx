@@ -30,10 +30,8 @@ const Wrapper = styled.button<ChipProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid ${COLORS.DISABLED};
   font-size: ${({ fs = 12 }) => fs}px;
-  padding: 8px 16px;
-  border-radius: 100rem;
+  border-radius: 20px;
 
   ${({ size = "md" }) => {
     const { width, height } = SIZE_MAP[size];
@@ -53,9 +51,8 @@ const Wrapper = styled.button<ChipProps>`
   }
 
   &:hover:not(:disabled) {
-    transition: all 0.15s ease-in-out;
-    background-color: ${({ bgColor = COLORS.PRIMARY }) => bgColor};
-    transition: 0.4s;
-    border-color: ${COLORS.BLACK};
+    transition: all 0.1s ease-in-out;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    color: ${COLORS.HOVER_TEXT};
   }
 `;

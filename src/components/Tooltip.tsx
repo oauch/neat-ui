@@ -50,7 +50,7 @@ function Tooltip({ children, ...props }: TooltipProps) {
 export default Tooltip;
 
 const Wrapper = styled.div`
-  display: block;
+  width: fit-content;
   position: relative;
 `;
 

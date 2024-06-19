@@ -10,7 +10,7 @@ const meta = {
     fs: 12,
     colorTheme: "primary",
     variants: "none",
-    isDisabled: false,
+    disabled: false,
   },
   component: Button,
 };

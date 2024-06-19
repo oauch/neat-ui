@@ -45,30 +45,30 @@ const Wrapper = styled.button<ButtonProps>`
     }
   }}px;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   font-size: ${({ fs = 12 }) => fs}px;
   font-weight: 600;
   color: ${({ color = "white" }) => color};
 
-  border: unset;
   border: 1px
     ${({ variants = "none" }) => (variants === "none" ? "none" : "solid")};
   border-radius: 10px;
-
   background-color: ${({ bgColor = COLORS.PRIMARY }) => bgColor};
 
   cursor: pointer;
 
-  &:hover {
-    transition: all 0.15s ease-in-out;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
-    box-shadow: 1.5px 1.5px 1.5px 1.5px ${COLORS.GRAY};
-    color: ${COLORS.HOVER_TEXT};
-  }
-
   &:disabled {
     cursor: not-allowed;
-    pointer-events: none;
     background-color: rgba(0, 0, 0, 0.2);
     background-image: none;
+  }
+
+  &:hover:not(:disabled) {
+    transition: all 0.1s ease-in-out;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    color: ${COLORS.HOVER_TEXT};
   }
 `;

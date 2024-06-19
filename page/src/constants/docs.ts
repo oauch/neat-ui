@@ -17,7 +17,7 @@ export const DOCS_LIST = [
       { key: "flex", name: "Flex", createdAt: "2024-05-03" },
       { key: "spinner", name: "Spinner", createdAt: "2024-04-17" },
       { key: "switch", name: "Switch", createdAt: "2024-04-11" },
-      { key: "tooltip", name: "Tooltip", createdAt: "2024-06-12" },
+      // { key: "tooltip", name: "Tooltip", createdAt: "2024-06-12" },
     ]),
   },
   {
@@ -34,7 +34,7 @@ export const DOCS_LIST = [
       },
       { key: "useHover", name: "useHover", createdAt: "2024-06-07" },
       { key: "useMediaQuery", name: "useMediaQuery", createdAt: "2024-05-13" },
-      { key: "useTooltip", name: "useTooltip", createdAt: "2024-05-07" },
+      // { key: "useTooltip", name: "useTooltip", createdAt: "2024-05-07" },
       { key: "useWindowSize", name: "useWindowSize", createdAt: "2024-04-20" },
     ]),
   },

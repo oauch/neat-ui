@@ -4,9 +4,8 @@ import { Switch } from "@oauch/neat-ui";
 const App = () => {
   return (
     <ComponentWrapper style={{ display: "flex", gap: "10px" }}>
-      <Switch size={"sm"} />
-      <Switch size={"md"} />
-      <Switch size={"lg"} />
+      <Switch disabled={true} />
+      <Switch disabled={false} />
     </ComponentWrapper>
   );
 };
@@ -19,9 +18,8 @@ import { Chip } from "@oauch/neat-ui";
 const App = () => {
   return (
     <div>
-      <Switch size={"sm"} />
-      <Switch size={"md"} />
-      <Switch size={"lg"} />
+      <Switch disabled={true} />
+      <Switch disabled={false} />
     </div>
   );
 };

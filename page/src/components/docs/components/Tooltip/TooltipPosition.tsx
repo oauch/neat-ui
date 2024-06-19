@@ -1,12 +1,18 @@
 import ComponentWrapper from "@/components/docs/ComponentWrapper";
-import { Switch } from "@oauch/neat-ui";
+import { Button, Tooltip } from "@oauch/neat-ui";
 
 const App = () => {
   return (
     <ComponentWrapper style={{ display: "flex", gap: "10px" }}>
-      <Switch size={"sm"} />
-      <Switch size={"md"} />
-      <Switch size={"lg"} />
+      <Tooltip position="top">
+        <Button>Top</Button>
+      </Tooltip>
+      <Tooltip position="topLeft">
+        <Button>TopLeft</Button>
+      </Tooltip>
+      <Tooltip position="topRight">
+        <Button>TopRight</Button>
+      </Tooltip>
     </ComponentWrapper>
   );
 };
@@ -19,9 +25,9 @@ import { Chip } from "@oauch/neat-ui";
 const App = () => {
   return (
     <div>
-      <Switch size={"sm"} />
-      <Switch size={"md"} />
-      <Switch size={"lg"} />
+      <Tooltip size={"sm"} />
+      <Tooltip size={"md"} />
+      <Tooltip size={"lg"} />
     </div>
   );
 };

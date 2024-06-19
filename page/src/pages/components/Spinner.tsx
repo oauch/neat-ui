@@ -27,27 +27,27 @@ const Spinner = () => {
           {
             name: "size",
             type: ["sm", "md", "lg"],
-            defaultVal: "md",
+            description: "Spinner Size",
           },
           {
             name: "speed",
             type: ["number"],
-            defaultVal: "1",
+            description: "Spinner Speed",
           },
           {
             name: "thickness",
             type: ["number"],
-            defaultVal: "2",
+            description: "Spinner Thickness (Empty Children)",
           },
           {
             name: "color",
             type: ["string"],
-            defaultVal: "#000",
+            description: "Spinner Color (Empty Children)",
           },
           {
             name: "emptyColor",
             type: ["string"],
-            defaultVal: "none",
+            description: "Spinner Empty Color (Empty Children)",
           },
         ]}
       />

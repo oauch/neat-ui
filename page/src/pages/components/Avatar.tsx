@@ -23,27 +23,27 @@ const Avatar = () => {
           {
             name: "index",
             type: ["number"],
-            defaultVal: "null",
+            description: "Avatar index",
           },
           {
             name: "max (AvatarGroup)",
             type: ["number"],
-            defaultVal: "null",
+            description: "Avatar max Count",
           },
           {
             name: "name",
             type: ["string"],
-            defaultVal: "null",
+            description: "Avatar name",
           },
           {
             name: "imgUrl",
             type: ["string"],
-            defaultVal: "null",
+            description: "Custom Img",
           },
           {
             name: "icon",
             type: ["React Element"],
-            defaultVal: "null",
+            description: "Custom Icon",
           },
         ]}
       />

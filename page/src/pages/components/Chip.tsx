@@ -27,32 +27,32 @@ const Chip = () => {
           {
             name: "size",
             type: ["sm", "md", "lg"],
-            defaultVal: "md",
+            description: "Chip Size",
           },
           {
             name: "fs",
             type: ["number"],
-            defaultVal: "12",
+            description: "font Size",
           },
           {
             name: "bgColor",
             type: ["string"],
-            defaultVal: "#2E8B57",
+            description: "background Color",
           },
           {
             name: "color",
             type: ["string"],
-            defaultVal: "#000",
+            description: "font Color",
           },
           {
             name: "disabled",
             type: ["boolean"],
-            defaultVal: "false",
+            description: "false",
           },
           {
             name: "onClick",
-            type: ["function"],
-            defaultVal: "() => void",
+            type: ["() => void"],
+            description: "Click event",
           },
         ]}
       />

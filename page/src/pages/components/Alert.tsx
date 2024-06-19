@@ -21,17 +21,17 @@ const Alert = () => {
           {
             name: "status",
             type: ["success", "info", "warning", "error"],
-            defaultVal: "success",
+            description: "Alert status",
           },
           {
             name: "variants",
-            type: ["fille", "outline"],
-            defaultVal: "fille",
+            type: ["fill", "outline"],
+            description: "Alert variants",
           },
           {
             name: "customIcon",
             type: ["string"],
-            defaultVal: "null",
+            description: "custom Icon setting",
           },
         ]}
       />

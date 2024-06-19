@@ -23,22 +23,22 @@ const Switch = () => {
           {
             name: "size",
             type: ["sm", "md", "lg"],
-            defaultVal: "md",
+            description: "Switch Size",
           },
           {
             name: "bgColor",
             type: ["string"],
-            defaultVal: "#2E8B57",
+            description: "background Color",
           },
           {
             name: "disabled",
             type: ["boolean"],
-            defaultVal: "false",
+            description: "disabled setting",
           },
           {
             name: "onClick",
-            type: ["function"],
-            defaultVal: "() => void",
+            type: ["() => void"],
+            description: "click Event",
           },
         ]}
       />

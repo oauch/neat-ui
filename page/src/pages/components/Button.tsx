@@ -29,27 +29,37 @@ const Button = () => {
           {
             name: "size",
             type: ["sm", "md", "lg"],
-            defaultVal: "md",
+            description: "Button Size",
           },
           {
             name: "fs",
             type: ["number"],
-            defaultVal: "12",
+            description: "font Size",
           },
           {
-            name: "colorTheme",
-            type: ["primary", "black", "white"],
-            defaultVal: "primary",
+            name: "bgColor",
+            type: ["string"],
+            description: "Background Color",
+          },
+          {
+            name: "color",
+            type: ["string"],
+            description: "font Color",
           },
           {
             name: "variants",
             type: ["none", "outline"],
-            defaultVal: "none",
+            description: "Existence of border",
           },
           {
-            name: "isDisabled",
+            name: "disabled",
             type: ["boolean"],
-            defaultVal: "false",
+            description: "disabled setting",
+          },
+          {
+            name: "onClick",
+            type: ["() => void"],
+            description: "Click event",
           },
         ]}
       />

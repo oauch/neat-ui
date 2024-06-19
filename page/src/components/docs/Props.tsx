@@ -3,7 +3,7 @@ import { COLORS } from "@/styles/colors";
 import { ComponentProps } from "@/types/Docs";
 import styled from "@emotion/styled";
 
-const TITLE = ["PropsName", "Type", "DefaultVal"];
+const TITLE = ["PropsName", "Type", "Description"];
 
 const Props = ({ props }: { props: ComponentProps[] }) => {
   return (
@@ -20,7 +20,7 @@ const Props = ({ props }: { props: ComponentProps[] }) => {
         </tr>
       </thead>
       <tbody>
-        {props.map(({ name, type, defaultVal }) => (
+        {props.map(({ name, type, description }) => (
           <tr key={name}>
             <Td>
               <Text fs={1.4} fw={400}>
@@ -34,7 +34,7 @@ const Props = ({ props }: { props: ComponentProps[] }) => {
             </Td>
             <Td>
               <Text fs={1.4} fw={400}>
-                {defaultVal}
+                {description}
               </Text>
             </Td>
           </tr>

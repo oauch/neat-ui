@@ -17,17 +17,17 @@ const AutoComplete = () => {
           {
             name: "options",
             type: ["Array"],
-            defaultVal: "null",
+            description: "Data in array",
           },
           {
             name: "value",
             type: ["string"],
-            defaultVal: "null",
+            description: "Input Value",
           },
           {
             name: "onChange",
             type: ["function"],
-            defaultVal: "null",
+            description: "Input onChange",
           },
         ]}
       />

@@ -21,7 +21,7 @@ const Flex = () => {
           {
             name: "direction",
             type: ["column", "column-reverse", "row", "row-reverse"],
-            defaultVal: "row",
+            description: "flex-direction",
           },
           {
             name: "justify",
@@ -35,32 +35,32 @@ const Flex = () => {
               "stretch",
               "normal",
             ],
-            defaultVal: "normal",
+            description: "justify-content",
           },
           {
             name: "align",
             type: ["start", "end", "center", "stretch", "baseline", "normal"],
-            defaultVal: "normal",
+            description: "align-items",
           },
           {
             name: "wrap",
             type: ["nowrap", "end", "center", "stretch", "baseline", "normal"],
-            defaultVal: "normal",
+            description: "flex-wrap",
           },
           {
             name: "grow",
             type: ["number"],
-            defaultVal: "null",
+            description: "flex-grow",
           },
           {
             name: "shrink",
             type: ["number"],
-            defaultVal: "null",
+            description: "flex-shrink",
           },
           {
             name: "gap",
             type: ["number"],
-            defaultVal: "null",
+            description: "gap",
           },
         ]}
       />

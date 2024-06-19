@@ -11,7 +11,7 @@ interface ExampleListItem {
 interface ComponentProps {
   name: string;
   type: string[];
-  defaultVal: string;
+  description: string;
 }
 
 interface DocsContentProps {

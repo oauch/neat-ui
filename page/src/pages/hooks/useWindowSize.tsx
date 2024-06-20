@@ -1,5 +1,6 @@
 import DocsContent from "@/components/docs/DocsContent";
 import DocsLayout from "@/components/docs/DocsLayout";
+import useWindowSizeHook from "@/components/docs/hooks/useWindowSizeHook";
 
 const useWindowSize = () => {
   return (
@@ -11,8 +12,24 @@ const useWindowSize = () => {
         }
         imports={["useWindowSize"]}
         src={"useWindowSize"}
-        examples={[]}
-        props={[]}
+        examples={[
+          {
+            title: "useWindowSize",
+            component: useWindowSizeHook,
+          },
+        ]}
+        props={[
+          {
+            name: "width",
+            type: ["number"],
+            description: "width value",
+          },
+          {
+            name: "height",
+            type: ["number"],
+            description: "height value",
+          },
+        ]}
       />
     </DocsLayout>
   );

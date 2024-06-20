@@ -1,15 +1,13 @@
 import Text from "@/components/common/Text";
 import { DOCS_LIST } from "@/constants/docs";
 import { COLORS } from "@/styles/colors";
+import { KeySeparation } from "@/utils/KeySeparation";
 import styled from "@emotion/styled";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
 const SideBar = () => {
   const router = useRouter();
-  const keySeparation = (key: string, name: string) => {
-    return key === "components" ? `/components/${name}` : `/hooks/${name}`;
-  };
   return (
     <Wrapper>
       {DOCS_LIST.map((val) => (
@@ -19,7 +17,7 @@ const SideBar = () => {
           </Text>
           <Items>
             {val.list.map((item) => (
-              <Link key={item.key} href={keySeparation(val.key, item.name)}>
+              <Link key={item.key} href={KeySeparation(val.key, item.name)}>
                 <Item
                   key={item.key}
                   active={router.pathname.includes(item.name)}
@@ -40,7 +38,7 @@ export default SideBar;
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 50px;
 `;
 

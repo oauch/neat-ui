@@ -1,12 +1,7 @@
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useRedirect } from "@/hooks/useRedirect";
 
 const Components = () => {
-  const router = useRouter();
-
-  useEffect(() => {
-    router.push("/components/Alert");
-  }, []);
+  useRedirect("/components/Alert");
 
   return;
 };

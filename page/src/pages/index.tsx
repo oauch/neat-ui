@@ -13,7 +13,7 @@ const Home = () => {
       <Text fs={2} fw={600}>
         It's easy and simple for developers to use
       </Text>
-      <Link href={"/components"}>
+      <Link href={"/docs"}>
         <Button
           size="lg"
           fs={15}

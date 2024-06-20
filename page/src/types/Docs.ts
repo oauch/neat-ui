@@ -16,11 +16,11 @@ interface ComponentProps {
 
 interface DocsContentProps {
   name: string;
-  description: string;
-  imports: string[];
-  src: string;
-  examples: ExampleListItem[];
-  props: ComponentProps[];
+  description?: string;
+  imports?: string[];
+  src?: string;
+  examples?: ExampleListItem[];
+  props?: ComponentProps[];
 }
 
 export type {

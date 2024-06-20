@@ -6,6 +6,14 @@ const sortArray = (array: ArrayProps[]) => {
 
 export const DOCS_LIST = [
   {
+    key: "docs",
+    name: "Docs",
+    list: sortArray([
+      { key: "description", name: "Description" },
+      { key: "install", name: "Install" },
+    ]),
+  },
+  {
     key: "components",
     name: "Components",
     list: sortArray([

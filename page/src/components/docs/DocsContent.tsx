@@ -22,17 +22,19 @@ const DocsContent = ({
         <Text fs={4} fw={700} color={COLORS.SeaGreen}>
           {name}
         </Text>
-        <Text fs={1.8}>{description}</Text>
-        <ImportSource imports={imports} src={src} />
-        <ExampleWrapper>
-          <Text fs={2.5} fw={800}>
-            Examples
-          </Text>
-          {examples.map(({ title, component }, index) => (
-            <Example key={index} title={title} component={component} />
-          ))}
-          <Props props={props} />
-        </ExampleWrapper>
+        {description && <Text fs={1.8}>{description}</Text>}
+        {imports && src && <ImportSource imports={imports} src={src} />}
+        {examples && (
+          <ExampleWrapper>
+            <Text fs={2.5} fw={800}>
+              Examples
+            </Text>
+            {examples.map(({ title, component }, index) => (
+              <Example key={index} title={title} component={component} />
+            ))}
+            {props && <Props props={props} />}
+          </ExampleWrapper>
+        )}
       </InWrapper>
     </Wrapper>
   );

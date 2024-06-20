@@ -23,7 +23,11 @@ const App = () => {
     <ComponentWrapper
       style={{ display: "flex", alignItems: "center", gap: "10px" }}
     >
-      {deviceType && <Text>{deviceType}</Text>}
+      {deviceType && (
+        <Text fs={2} fw={800}>
+          {deviceType}
+        </Text>
+      )}
     </ComponentWrapper>
   );
 };

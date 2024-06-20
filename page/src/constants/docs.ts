@@ -27,11 +27,11 @@ export const DOCS_LIST = [
       { key: "useBoolean", name: "useBoolean", createdAt: "2024-04-07" },
       { key: "useClipBoard", name: "useClipBoard", createdAt: "2024-04-20" },
       { key: "useDeviceType", name: "useDeviceType", createdAt: "2024-04-20" },
-      {
-        key: "useEventListener",
-        name: "useEventListener",
-        createdAt: "2024-06-07",
-      },
+      // {
+      //   key: "useEventListener",
+      //   name: "useEventListener",
+      //   createdAt: "2024-06-07",
+      // },
       { key: "useHover", name: "useHover", createdAt: "2024-06-07" },
       { key: "useMediaQuery", name: "useMediaQuery", createdAt: "2024-05-13" },
       // { key: "useTooltip", name: "useTooltip", createdAt: "2024-05-07" },

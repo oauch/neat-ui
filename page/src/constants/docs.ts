@@ -35,7 +35,7 @@ export const DOCS_LIST = [
       { key: "useHover", name: "useHover", createdAt: "2024-06-07" },
       { key: "useMediaQuery", name: "useMediaQuery", createdAt: "2024-05-13" },
       // { key: "useTooltip", name: "useTooltip", createdAt: "2024-05-07" },
-      { key: "useWindowSize", name: "useWindowSize", createdAt: "2024-04-20" },
+      // { key: "useWindowSize", name: "useWindowSize", createdAt: "2024-04-20" },
     ]),
   },
 ];

@@ -1,34 +1,42 @@
+import NewDocs from "@/components/common/NewDocs";
 import Text from "@/components/common/Text";
 import { DOCS_LIST } from "@/constants/docs";
 import { COLORS } from "@/styles/colors";
+import { CheckNewDocs } from "@/utils/CheckNewDocs";
 import { KeySeparation } from "@/utils/KeySeparation";
 import styled from "@emotion/styled";
+import { Flex } from "@oauch/neat-ui";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
 const SideBar = () => {
   const router = useRouter();
+
   return (
     <Wrapper>
-      {DOCS_LIST.map((val) => (
-        <ListItems key={val.key}>
-          <Text fs={2.4} fw={700} color={COLORS.SeaGreen}>
-            {val.name}
-          </Text>
-          <Items>
-            {val.list.map((item) => (
-              <Link key={item.key} href={KeySeparation(val.key, item.name)}>
-                <Item
-                  key={item.key}
-                  active={router.pathname.includes(item.name)}
-                >
-                  {item.name}
-                </Item>
-              </Link>
-            ))}
-          </Items>
-        </ListItems>
-      ))}
+      {DOCS_LIST.map((val) => {
+        const latestItemKey =
+          val.key !== "docs" ? CheckNewDocs(val.list) : null;
+        return (
+          <ListItems key={val.key}>
+            <Text fs={2.4} fw={700} color={COLORS.SeaGreen}>
+              {val.name}
+            </Text>
+            <Items>
+              {val.list.map((item) => (
+                <Flex align="center" gap={5} key={item.key}>
+                  <Link href={KeySeparation(val.key, item.name)}>
+                    <Item active={router.pathname.includes(item.name)}>
+                      {item.name}
+                    </Item>
+                  </Link>
+                  {item.key === latestItemKey && <NewDocs />}
+                </Flex>
+              ))}
+            </Items>
+          </ListItems>
+        );
+      })}
     </Wrapper>
   );
 };

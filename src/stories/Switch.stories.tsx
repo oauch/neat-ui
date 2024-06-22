@@ -1,12 +1,14 @@
-import Switch from '@/components/Switch';
-import { SwitchProps } from '@/types/switch';
+import Switch from "@/components/Switch";
+import { COLORS } from "@/styles/color";
+import { SwitchProps } from "@/types/switch";
+import React from "react";
 
 const meta = {
-  title: 'Switch',
+  title: "Switch",
   args: {
-    size: 'md',
-    theme: 'primary',
-    isDisabled: 'false',
+    size: "md",
+    bgColor: COLORS.PRIMARY,
+    disabled: false,
   },
   component: Switch,
 };

@@ -4,10 +4,11 @@ interface ButtonProps extends DefaultProps {
   type?: "button" | "submit";
   size?: "sm" | "md" | "lg";
   fs?: number;
-  colorTheme?: "primary" | "black" | "white";
+  bgColor?: string;
+  color?: string;
   variants?: "none" | "outline";
   onClick?: () => void;
-  isDisabled?: boolean;
+  disabled?: boolean;
 }
 
 export type { ButtonProps };

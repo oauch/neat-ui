@@ -1,20 +1,20 @@
-import { CSSProperties, ReactNode } from 'react';
+import { CSSProperties, ReactNode } from "react";
 
 type Position =
-  | 'top'
-  | 'topLeft'
-  | 'topRight'
-  | 'bottom'
-  | 'bottomLeft'
-  | 'bottomRight'
-  | 'left'
-  | 'leftTop'
-  | 'leftBottom'
-  | 'right'
-  | 'rightTop'
-  | 'rightBottom';
+  | "top"
+  | "topLeft"
+  | "topRight"
+  | "bottom"
+  | "bottomLeft"
+  | "bottomRight"
+  | "left"
+  | "leftTop"
+  | "leftBottom"
+  | "right"
+  | "rightTop"
+  | "rightBottom";
 
-type Delay = 'enter' | 'leave';
+type Delay = "enter" | "leave";
 
 interface Points {
   top: number;
@@ -27,7 +27,7 @@ interface ContentAndPosition {
 }
 
 interface InternalTooltipsProps extends ContentAndPosition {
-  backgroundColor: string;
+  bgColor: string;
 }
 
 interface useTooltipsProps extends ContentAndPosition {

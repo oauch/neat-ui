@@ -41,6 +41,7 @@ const config = {
     babel({
       extensions,
       include: ["src/**/*"],
+      babelHelpers: "bundled",
     }),
     postcss({
       plugins: [cssimport(), autoprefixer()],

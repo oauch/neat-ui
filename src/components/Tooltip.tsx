@@ -37,7 +37,7 @@ function Tooltip({ children, ...props }: TooltipProps) {
             ref={tooltipRef}
             style={{ ...pointsOffset, ...customStyles }}
             position={position}
-            backgroundColor={customBackgroundColor}
+            bgColor={customBackgroundColor}
           >
             {content}
           </Content>,
@@ -50,7 +50,7 @@ function Tooltip({ children, ...props }: TooltipProps) {
 export default Tooltip;
 
 const Wrapper = styled.div`
-  display: block;
+  width: fit-content;
   position: relative;
 `;
 
@@ -72,8 +72,8 @@ const Content = styled.div<InternalTooltipsProps>`
 
     border-width: 8px;
     border-style: solid;
-    ${({ position = "top", backgroundColor = COLORS.BLACK }) =>
-      ArrowConvert(position, backgroundColor)}
+    ${({ position = "top", bgColor = COLORS.BLACK }) =>
+      ArrowConvert(position, bgColor)}
 
     z-index: 1000;
   }

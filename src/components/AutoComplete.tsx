@@ -1,3 +1,4 @@
+import { COLORS } from "@/styles/color";
 import { Options, SelectProps } from "@/types/autoComplete";
 
 import styled from "@emotion/styled";
@@ -10,6 +11,7 @@ import React, {
   useRef,
   useState,
 } from "react";
+import { IoIosArrowDown } from "react-icons/io";
 
 const EMPTY_VALUE = [{ index: "404", value: "No Options." }];
 
@@ -35,7 +37,7 @@ function AutoComplete(props: SelectProps) {
    * @name  handleOpen
    * @description 옵션을 오픈하는 함수
    */
-  const handleOpen = (e: MouseEvent<HTMLInputElement | HTMLButtonElement>) => {
+  const handleOpen = (e: MouseEvent<HTMLInputElement | SVGElement>) => {
     e.preventDefault();
     setIsOpen((prev) => !prev);
     if (isOpen === false && inputRef.current !== null) {
@@ -254,7 +256,7 @@ function AutoComplete(props: SelectProps) {
         onFocus={() => setIsOpen(true)}
         placeholder="Select Movie"
       />
-      <Button isOpen={isOpen} onMouseDown={(e) => handleOpen(e)} />
+      <Button isopen={isOpen.toString()} onMouseDown={(e) => handleOpen(e)} />
       {item && isOpen && (
         <Items ref={listRef} isElementAtBottom={isElementAtBottom}>
           {item.map((val, index) => (
@@ -278,7 +280,6 @@ export default AutoComplete;
 
 const Wrapper = styled.div`
   position: relative;
-  transition: all 1s ease-in-out;
 `;
 
 const Input = styled.input`
@@ -301,20 +302,16 @@ const Input = styled.input`
   }
 `;
 
-const Button = styled.button<{ isOpen: boolean }>`
+const Button = styled(IoIosArrowDown)<{ isopen: string }>`
   width: 16px;
   height: 16px;
   position: absolute;
   right: 5px;
-  bottom: 8px;
-
-  background-image: url("../icons/ArrowDropdown.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  bottom: 7px;
 
   cursor: pointer;
-  transform: ${({ isOpen }) =>
-    isOpen ? `scale(1, -1)` : `transform: scale(-1, 1);`};
+  transform: ${({ isopen }) =>
+    isopen === "true" ? `scale(1, -1)` : `transform: scale(-1, 1);`};
   transition: all 0.3s ease-in-out;
 
   &:hover {
@@ -334,6 +331,8 @@ const Items = styled.ul<{ isElementAtBottom: boolean }>`
   border: 1px solid #2e8b57;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   overflow-y: auto;
+
+  z-index: 10;
 `;
 
 const Item = styled.li<{
@@ -345,12 +344,12 @@ const Item = styled.li<{
   padding: 5px;
 
   background-color: ${({ index, selectedIndex, prevSelectedIndex }) => {
-    if (index === selectedIndex) return `rgba(0, 0, 0, 0.1)`;
+    if (index === selectedIndex) return COLORS.LightGray;
     else if (index === prevSelectedIndex) return `#2e8b5696`;
-    else return "transparent";
+    else return COLORS.WHITE;
   }};
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: ${COLORS.LightGray};
   }
 `;

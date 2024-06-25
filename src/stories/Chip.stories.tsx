@@ -20,6 +20,4 @@ function Component({ children, ...props }: ChipProps) {
   return <Chip {...props}>{children ?? "Chip"}</Chip>;
 }
 
-export const Chip_ = {
-  render: Component,
-};
+export const Chip_ = { render: Component };

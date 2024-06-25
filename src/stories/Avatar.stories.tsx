@@ -37,6 +37,4 @@ function Component({ size, ...props }: AvatarProps) {
   );
 }
 
-export const Avatar_ = {
-  render: Component,
-};
+export const Avatar_ = { render: Component };

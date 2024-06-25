@@ -21,6 +21,4 @@ function Component({ ...props }: ButtonProps) {
   return <Button {...props}>Button</Button>;
 }
 
-export const Button_ = {
-  render: Component,
-};
+export const Button_ = { render: Component };

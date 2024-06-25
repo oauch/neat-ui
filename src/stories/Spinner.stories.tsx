@@ -22,6 +22,4 @@ function Component({ ...props }: SpinnerProps) {
   return <Spinner {...props} />;
 }
 
-export const Spinner_ = {
-  render: Component,
-};
+export const Spinner_ = { render: Component };

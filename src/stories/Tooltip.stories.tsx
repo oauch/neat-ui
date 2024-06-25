@@ -21,6 +21,4 @@ function Component({ ...props }: TooltipProps) {
   );
 }
 
-export const Tooltip_ = {
-  render: Component,
-};
+export const Tooltip_ = { render: Component };

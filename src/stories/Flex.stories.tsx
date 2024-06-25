@@ -29,6 +29,4 @@ function Component({ ...props }: FlexProps) {
   );
 }
 
-export const Flex_ = {
-  render: Component,
-};
+export const Flex_ = { render: Component };

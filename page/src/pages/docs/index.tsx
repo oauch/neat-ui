@@ -1,7 +1,7 @@
 import { useRedirect } from "@/hooks/useRedirect";
 
 const Docs = () => {
-  useRedirect("/docs/Description");
+  useRedirect("/docs/description");
   return;
 };
 

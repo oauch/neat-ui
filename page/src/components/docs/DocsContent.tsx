@@ -6,6 +6,7 @@ import ImportSource from "@/components/layout/ImportSource";
 import { COLORS } from "@/styles/colors";
 import { DocsContentProps } from "@/types/Docs";
 import styled from "@emotion/styled";
+import { useTranslation } from "react-i18next";
 
 const DocsContent = ({
   name,
@@ -15,6 +16,7 @@ const DocsContent = ({
   examples,
   props,
 }: DocsContentProps) => {
+  const { t } = useTranslation();
   return (
     <Wrapper>
       <Head name={name} />
@@ -27,7 +29,7 @@ const DocsContent = ({
         {examples && (
           <ExampleWrapper>
             <Text fs={2.5} fw={800}>
-              Examples
+              {t("Examples")}
             </Text>
             {examples.map(({ title, component }, index) => (
               <Example key={index} title={title} component={component} />

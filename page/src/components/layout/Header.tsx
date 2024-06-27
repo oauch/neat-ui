@@ -8,11 +8,33 @@ import { COLORS } from "@/styles/colors";
 import styled from "@emotion/styled";
 import { Flex } from "@oauch/neat-ui";
 import Link from "next/link";
-
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { FaGithub, FaNpm } from "react-icons/fa";
+import { FaEarthAsia } from "react-icons/fa6";
+
+const MODAL_VAL = ["한국어", "English"];
 
 const Header = () => {
+  const [locate, setLocate] = useState("en_US");
+  const [isOpen, setIsOpen] = useState(false);
   const { version } = useNpmVersion();
+  const { i18n } = useTranslation();
+
+  const openModal = () => {
+    setIsOpen((prev) => !prev);
+  };
+
+  const handleLanguage = (language: string) => {
+    if (language === "한국어") setLocate("ko_KR");
+    if (language === "English") setLocate("en_US");
+    setIsOpen(false);
+  };
+
+  useEffect(() => {
+    i18n.changeLanguage(locate);
+  }, [locate]);
+
   return (
     <Wrapper>
       <Flex align="center" gap={20}>
@@ -24,6 +46,22 @@ const Header = () => {
         <Version>{version}</Version>
       </Flex>
       <Flex align="center" gap={10}>
+        <Translate>
+          <FaEarthAsia
+            size={30}
+            onClick={openModal}
+            style={{ cursor: "pointer" }}
+          />
+          {isOpen && (
+            <MiniModal>
+              {MODAL_VAL.map((val, index) => (
+                <button key={index} onClick={() => handleLanguage(val)}>
+                  {val}
+                </button>
+              ))}
+            </MiniModal>
+          )}
+        </Translate>
         <IconLink Icon={FaGithub} href={GITHUB} />
         <IconLink Icon={FaNpm} href={NPM} />
       </Flex>
@@ -56,4 +94,25 @@ const Version = styled.div`
   font-size: 1.2rem;
   font-weight: 500;
   background-color: ${COLORS.LightGray};
+`;
+
+const Translate = styled.div`
+  display: flex;
+  position: relative;
+  font-size: 1.5rem;
+`;
+
+const MiniModal = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  top: 35px;
+  left: -23px;
+  padding: 10px;
+  border: 1px solid ${COLORS.SeaGreen};
+  border-radius: 10px;
+  background-color: ${COLORS.White};
+  z-index: 10000;
 `;

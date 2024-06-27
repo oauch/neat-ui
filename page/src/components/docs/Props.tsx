@@ -2,10 +2,12 @@ import Text from "@/components/common/Text";
 import { COLORS } from "@/styles/colors";
 import { ComponentProps } from "@/types/Docs";
 import styled from "@emotion/styled";
+import { useTranslation } from "react-i18next";
 
 const TITLE = ["PropsName", "Type", "Description"];
 
 const Props = ({ props }: { props: ComponentProps[] }) => {
+  const { t } = useTranslation();
   return (
     <Table>
       <thead>
@@ -13,7 +15,7 @@ const Props = ({ props }: { props: ComponentProps[] }) => {
           {TITLE.map((val, index) => (
             <Th key={index}>
               <Text fs={1.5} fw={600}>
-                {val}
+                {t(val)}
               </Text>
             </Th>
           ))}

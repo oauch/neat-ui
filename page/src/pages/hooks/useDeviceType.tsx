@@ -1,15 +1,15 @@
 import DocsContent from "@/components/docs/DocsContent";
 import DocsLayout from "@/components/docs/DocsLayout";
 import useDeviceTypeHook from "@/components/docs/hooks/useDeviceTypeHook";
+import { useTranslation } from "react-i18next";
 
 const useDeviceType = () => {
+  const { t } = useTranslation();
   return (
     <DocsLayout>
       <DocsContent
         name={"useDeviceType"}
-        description={
-          "useDeviceType is detects the type of device the user is using and provides the appropriate UI for that device."
-        }
+        description={t("useDeviceType_Description")}
         imports={["useDeviceType"]}
         src={"useDeviceType"}
         examples={[{ title: "useDeviceType", component: useDeviceTypeHook }]}

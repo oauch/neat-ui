@@ -9,8 +9,8 @@ export const DOCS_LIST = [
     key: "docs",
     name: "Docs",
     list: sortArray([
-      { key: "description", name: "Description" },
-      { key: "install", name: "Install" },
+      { key: "description", name: "Docs_Description_Title" },
+      { key: "install", name: "Docs_Install" },
     ]),
   },
   {

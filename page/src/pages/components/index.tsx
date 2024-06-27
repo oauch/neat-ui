@@ -1,7 +1,7 @@
 import { useRedirect } from "@/hooks/useRedirect";
 
 const Components = () => {
-  useRedirect("/components/Alert");
+  useRedirect("/components/alert");
 
   return;
 };

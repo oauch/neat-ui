@@ -1,13 +1,15 @@
 import DocsContent from "@/components/docs/DocsContent";
 import DocsLayout from "@/components/docs/DocsLayout";
 import useClipBoardHook from "@/components/docs/hooks/useClipBoardHook";
+import { useTranslation } from "react-i18next";
 
 const useClipBoard = () => {
+  const { t } = useTranslation();
   return (
     <DocsLayout>
       <DocsContent
         name={"useClipBoard"}
-        description={"useClipBoard is handles copying content to clipboard."}
+        description={t("useClipBoard_Description")}
         imports={["useClipBoard"]}
         src={"useClipBoard"}
         examples={[{ title: "useClipBoard", component: useClipBoardHook }]}

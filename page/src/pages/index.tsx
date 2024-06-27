@@ -3,15 +3,18 @@ import { COLORS } from "@/styles/colors";
 import styled from "@emotion/styled";
 import { Button } from "@oauch/neat-ui";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+  const { t } = useTranslation();
+
   return (
     <Wrapper>
       <Text fs={4} fw={800} color={COLORS.SeaGreen}>
-        Just Neat and Simple React UI
+        {t("IntroTitle")}
       </Text>
       <Text fs={2} fw={600}>
-        It's easy and simple for developers to use
+        {t("SubTitle")}
       </Text>
       <Link href={"/docs"}>
         <Button
@@ -23,7 +26,7 @@ const Home = () => {
             color: COLORS.White,
           }}
         >
-          Get Started
+          {t("StartButton")}
         </Button>
       </Link>
     </Wrapper>

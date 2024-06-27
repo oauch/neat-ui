@@ -8,8 +8,10 @@ import styled from "@emotion/styled";
 import { Flex } from "@oauch/neat-ui";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useTranslation } from "react-i18next";
 
 const SideBar = () => {
+  const { t } = useTranslation();
   const router = useRouter();
 
   return (
@@ -20,14 +22,14 @@ const SideBar = () => {
         return (
           <ListItems key={val.key}>
             <Text fs={2.4} fw={700} color={COLORS.SeaGreen}>
-              {val.name}
+              {t(val.name)}
             </Text>
             <Items>
               {val.list.map((item) => (
                 <Flex align="center" gap={5} key={item.key}>
-                  <Link href={KeySeparation(val.key, item.name)}>
-                    <Item active={router.pathname.includes(item.name)}>
-                      {item.name}
+                  <Link href={KeySeparation(val.key, item.key)}>
+                    <Item active={router.pathname.includes(item.key)}>
+                      {t(item.name)}
                     </Item>
                   </Link>
                   {item.key === latestItemKey && <NewDocs />}

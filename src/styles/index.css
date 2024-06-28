@@ -4,12 +4,6 @@
   word-break: keep-all;
 }
 
-html,
-body {
-  font-size: 62.5%;
-  -webkit-font-smoothing: antialiased;
-}
-
 a {
   color: black;
 }

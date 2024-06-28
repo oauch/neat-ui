@@ -19,6 +19,4 @@ function Component({ ...props }: SwitchProps) {
   return <Switch {...props} />;
 }
 
-export const Switch_ = {
-  render: Component,
-};
+export const Switch_ = { render: Component };

@@ -5,6 +5,7 @@ export { default as Avatar } from "./Avatar";
 export { default as AvatarGroup } from "./AvatarGroup";
 export { default as Button } from "./Button";
 export { default as Chip } from "./Chip";
+export { default as Code } from "./Code";
 export { default as Flex } from "./Flex";
 export { default as Spinner } from "./Spinner";
 export { default as Switch } from "./Switch";

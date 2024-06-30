@@ -27,6 +27,7 @@ export const DOCS_LIST = [
       { key: "switch", name: "Switch", createdAt: "2024-04-11" },
       { key: "code", name: "Code", createdAt: "2024-06-25" },
       // { key: "tooltip", name: "Tooltip", createdAt: "2024-06-12" },
+      { key: "badge", name: "Badge", createdAt: "2024-06-29" },
     ]),
   },
   {

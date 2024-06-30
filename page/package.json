@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@oauch/neat-ui": "^0.0.62",
+    "@oauch/neat-ui": "^0.0.64",
     "axios": "^1.7.2",
     "i18next": "^23.11.5",
     "jotai": "^2.8.3",

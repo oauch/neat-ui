@@ -27,6 +27,8 @@
   "Switch_Description": "값이 참 / 거짓으로 나눌 수 있는 스위치 컴포넌트",
   "Code": "Code",
   "Code_Description": "인라인 코드를 표시하는 데 사용됩니다.",
+  "Badge": "Badge",
+  "Badge_Description": "빠른 인식을 위해 항목의 상태를 강조 표시하는 데 사용됩니다.",
   "Hooks": "커스텀 훅",
   "useBoolean": "useBoolean",
   "useBoolean_Description": "불린 값을 관리하는 커스텀 훅",

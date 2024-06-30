@@ -1,6 +1,7 @@
 export * from "./alert";
 export * from "./autoComplete";
 export * from "./avatar";
+export * from "./badge";
 export * from "./button";
 export * from "./chip";
 export * from "./code";

@@ -9,8 +9,8 @@ export const DOCS_LIST = [
     key: "docs",
     name: "Docs",
     list: sortArray([
-      { key: "description", name: "Description" },
-      { key: "install", name: "Install" },
+      { key: "description", name: "Docs_Description_Title" },
+      { key: "install", name: "Docs_Install" },
     ]),
   },
   {
@@ -25,6 +25,7 @@ export const DOCS_LIST = [
       { key: "flex", name: "Flex", createdAt: "2024-05-03" },
       { key: "spinner", name: "Spinner", createdAt: "2024-04-17" },
       { key: "switch", name: "Switch", createdAt: "2024-04-11" },
+      { key: "code", name: "Code", createdAt: "2024-06-25" },
       // { key: "tooltip", name: "Tooltip", createdAt: "2024-06-12" },
     ]),
   },

@@ -1,13 +1,15 @@
 import DocsContent from "@/components/docs/DocsContent";
 import DocsLayout from "@/components/docs/DocsLayout";
 import useMediaQueryHook from "@/components/docs/hooks/useMediaQueryHook";
+import { useTranslation } from "react-i18next";
 
 const useMediaQuery = () => {
+  const { t } = useTranslation();
   return (
     <DocsLayout>
       <DocsContent
         name={"useMediaQuery"}
-        description={"useMediaQuery is matches to a CSS media query"}
+        description={t("useMediaQuery_Description")}
         imports={["useMediaQuery"]}
         src={"useMediaQuery"}
         examples={[

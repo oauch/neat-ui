@@ -1,15 +1,15 @@
 import DocsContent from "@/components/docs/DocsContent";
 import DocsLayout from "@/components/docs/DocsLayout";
 import useHoverHook from "@/components/docs/hooks/useHoverHook";
+import { useTranslation } from "react-i18next";
 
 const useHover = () => {
+  const { t } = useTranslation();
   return (
     <DocsLayout>
       <DocsContent
         name={"useHover"}
-        description={
-          "useHover is allows you to track whether an element is being hovered over or not."
-        }
+        description={t("useHover_Description")}
         imports={["useHover"]}
         src={"useHover"}
         examples={[

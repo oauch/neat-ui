@@ -1,15 +1,15 @@
 import DocsContent from "@/components/docs/DocsContent";
 import DocsLayout from "@/components/docs/DocsLayout";
 import useBooleanHook from "@/components/docs/hooks/useBooleanHook";
+import { useTranslation } from "react-i18next";
 
 const useBoolean = () => {
+  const { t } = useTranslation();
   return (
     <DocsLayout>
       <DocsContent
         name={"useBoolean"}
-        description={
-          "useBoolean is a custom hook used to manage a boolean value"
-        }
+        description={t("useBoolean_Description")}
         imports={["useBoolean"]}
         src={"useBoolean"}
         examples={[{ title: "useBoolean", component: useBooleanHook }]}

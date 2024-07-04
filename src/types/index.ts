@@ -9,4 +9,5 @@ export * from "./default";
 export * from "./flex";
 export * from "./spinner";
 export * from "./switch";
+export * from "./text";
 export * from "./tooltip";

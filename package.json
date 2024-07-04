@@ -25,12 +25,11 @@
   ],
   "scripts": {
     "publish": "rm -rf dist && rollup -c",
+    "version:patch": "npm version patch && git push origin master",
+    "version:minor": "npm version minor && git push origin master",
+    "version:major": "npm version major && git push origin master",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "patch": "npm version patch",
-    "minor": "npm version minor",
-    "major": "npm version major",
-    "chromatic": "npx chromatic --project-token=chpt_e77123e57364b21"
+    "build-storybook": "storybook build"
   },
   "peerDependencies": {
     "react": ">=18",

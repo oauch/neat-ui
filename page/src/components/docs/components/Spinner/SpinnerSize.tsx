@@ -4,24 +4,23 @@ import { Spinner } from "@oauch/neat-ui";
 const App = () => {
   return (
     <ComponentWrapper style={{ display: "flex", gap: "10px" }}>
-      <Spinner size="sm">🐶</Spinner>
-      <Spinner size="md">🐶</Spinner>
-      <Spinner size="lg">🐶</Spinner>
+      <Spinner size="sm" />
+      <Spinner size="md" />
+      <Spinner size="lg" />
     </ComponentWrapper>
   );
 };
 
 export default App;
 
-App.code = `import ComponentWrapper from "@/components/docs/ComponentWrapper";
-import { Chip } from "@oauch/neat-ui";
+App.code = `import { Chip } from "@oauch/neat-ui";
 
 const App = () => {
   return (
     <div>
-      <Spinner size="sm">🐶</Spinner>
-      <Spinner size="md">🐶</Spinner>
-      <Spinner size="lg">🐶</Spinner>
+      <Spinner size="sm" />
+      <Spinner size="md" />
+      <Spinner size="lg" />
     </div>
   );
 };

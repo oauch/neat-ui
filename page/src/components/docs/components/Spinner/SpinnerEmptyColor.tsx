@@ -15,8 +15,7 @@ const App = () => {
 
 export default App;
 
-App.code = `import ComponentWrapper from "@/components/docs/ComponentWrapper";
-import { Chip } from "@oauch/neat-ui";
+App.code = `import { Chip } from "@oauch/neat-ui";
 
 const App = () => {
   return (

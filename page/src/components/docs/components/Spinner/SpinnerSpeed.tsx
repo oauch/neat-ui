@@ -4,22 +4,25 @@ import { Spinner } from "@oauch/neat-ui";
 const App = () => {
   return (
     <ComponentWrapper style={{ display: "flex", gap: "10px" }}>
-      <Spinner speed={2}>🐶</Spinner>
-      <Spinner speed={4}>🐶</Spinner>
+      <Spinner />
+      <Spinner speed={2} />
+      <Spinner speed={4} />
+      <Spinner speed={6} />
     </ComponentWrapper>
   );
 };
 
 export default App;
 
-App.code = `import ComponentWrapper from "@/components/docs/ComponentWrapper";
-import { Chip } from "@oauch/neat-ui";
+App.code = `import { Chip } from "@oauch/neat-ui";
 
 const App = () => {
   return (
     <div>
-      <Spinner speed={2}>🐶</Spinner>
-      <Spinner speed={6}>🐶</Spinner>
+      <Spinner />
+      <Spinner speed={2} />
+      <Spinner speed={4} />
+      <Spinner speed={6} />
     </div>
   );
 };

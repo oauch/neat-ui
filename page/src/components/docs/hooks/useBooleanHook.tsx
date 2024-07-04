@@ -1,6 +1,5 @@
-import Text from "@/components/common/Text";
 import ComponentWrapper from "@/components/docs/ComponentWrapper";
-import { Button, useBoolean } from "@oauch/neat-ui";
+import { Button, Text, useBoolean } from "@oauch/neat-ui";
 
 const App = () => {
   const { isBoolean, setTrue, setFalse, toggle, setIsBoolean } = useBoolean();
@@ -8,7 +7,7 @@ const App = () => {
     <ComponentWrapper
       style={{ display: "flex", flexDirection: "column", gap: "10px" }}
     >
-      {isBoolean ? <Text fs={2}>Tada!</Text> : <Text fs={2}>Dada</Text>}
+      {isBoolean ? <Text fs={20}>Tada!</Text> : <Text fs={20}>Dada</Text>}
       <div style={{ display: "flex" }}>
         <Button onClick={setTrue}>True</Button>
         <Button onClick={setFalse}>False</Button>

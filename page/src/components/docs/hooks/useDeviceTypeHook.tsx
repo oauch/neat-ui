@@ -1,7 +1,6 @@
-import Text from "@/components/common/Text";
 import ComponentWrapper from "@/components/docs/ComponentWrapper";
 import { COLORS } from "@/styles/colors";
-import { useDeviceType } from "@oauch/neat-ui";
+import { Text, useDeviceType } from "@oauch/neat-ui";
 
 const App = () => {
   const { isMobile, isTablet } = useDeviceType();

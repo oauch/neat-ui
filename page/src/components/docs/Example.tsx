@@ -1,13 +1,13 @@
-import Text from "@/components/common/Text";
 import CodeBlock from "@/components/docs/CodeBlock";
 import { COLORS } from "@/styles/colors";
 import { ExampleListItem } from "@/types/Docs";
 import styled from "@emotion/styled";
+import { Text } from "@oauch/neat-ui";
 
 const Example = ({ title, component: Component }: ExampleListItem) => {
   return (
     <Wrapper>
-      <Text fs={2} fw={700}>
+      <Text fs={20} fw={700}>
         🟢 {title}
       </Text>
       <InWrapper>

@@ -1,7 +1,6 @@
-import Text from "@/components/common/Text";
 import { COLORS } from "@/styles/colors";
 import styled from "@emotion/styled";
-import { Button } from "@oauch/neat-ui";
+import { Button, Text } from "@oauch/neat-ui";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
@@ -10,10 +9,10 @@ const Home = () => {
 
   return (
     <Wrapper>
-      <Text fs={4} fw={800} color={COLORS.SeaGreen}>
+      <Text fs={40} fw={800} color={COLORS.SeaGreen}>
         {t("IntroTitle")}
       </Text>
-      <Text fs={2} fw={600}>
+      <Text fs={20} fw={600}>
         {t("SubTitle")}
       </Text>
       <Link href={"/docs"}>

@@ -1,11 +1,10 @@
 import CopyButton from "@/components/common/CopyButton";
 import IconLink from "@/components/common/IconLink";
-import Text from "@/components/common/Text";
 import { COLORS } from "@/styles/colors";
 import { StringCovert } from "@/utils/StringCovert";
 import { URLCovert } from "@/utils/URLConvert";
 import styled from "@emotion/styled";
-import { Flex, useClipBoard } from "@oauch/neat-ui";
+import { Flex, Text, useClipBoard } from "@oauch/neat-ui";
 import { FaGithub } from "react-icons/fa";
 
 type ImportSourceProps = {
@@ -18,7 +17,7 @@ const ImportSource = ({ imports, src }: ImportSourceProps) => {
   return (
     <Wrapper>
       <Flex align="center" gap={10}>
-        <Text fs={2} fw={600}>
+        <Text fs={20} fw={600}>
           Import
         </Text>
         <Import>

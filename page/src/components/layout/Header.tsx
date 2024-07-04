@@ -1,9 +1,9 @@
 import IconLink from "@/components/common/IconLink";
-import Text from "@/components/common/Text";
 import { TITLE } from "@/constants/common";
 import { GITHUB, NPM } from "@/constants/url";
 import useNpmVersion from "@/hooks/useNpmVersion";
 import { COLORS } from "@/styles/colors";
+import { Text } from "@oauch/neat-ui";
 
 import styled from "@emotion/styled";
 import { Flex } from "@oauch/neat-ui";
@@ -39,7 +39,7 @@ const Header = () => {
     <Wrapper>
       <Flex align="center" gap={20}>
         <Link href={"/"}>
-          <Text fs={3} fw={800} color={COLORS.SeaGreen}>
+          <Text fs={30} fw={800} color={COLORS.SeaGreen}>
             {TITLE}
           </Text>
         </Link>

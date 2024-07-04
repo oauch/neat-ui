@@ -14,7 +14,7 @@ const meta = {
 export default meta;
 
 function Component({ ...props }: AlertProps) {
-  return <Alert {...props}>해당 컴포넌트는 Alert 입니다.</Alert>;
+  return <Alert {...props}>This Component is Alert</Alert>;
 }
 
 export const Alert_ = {

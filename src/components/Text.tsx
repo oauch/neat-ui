@@ -20,6 +20,5 @@ const Wrapper = styled.p<TextProps>`
   letter-spacing: ${({ letterS }) => letterS};
   color: ${({ color }) => color};
   white-space: break-spaces;
-
   ${({ decoration }) => decoration && DecorationCovert(decoration)}
 `;

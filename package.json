@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/oauch/neat-ui"
+    "url": "git+https://github.com/oauch/neat-ui.git"
   },
   "publishConfig": {
     "access": "public"
@@ -24,12 +24,13 @@
     "/dist"
   ],
   "scripts": {
-    "build": "rm -rf dist && rollup -c",
+    "publish": "rm -rf dist && rollup -c",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "patch": "npm version patch",
     "minor": "npm version minor",
-    "major": "npm version major"
+    "major": "npm version major",
+    "chromatic": "npx chromatic --project-token=chpt_e77123e57364b21"
   },
   "peerDependencies": {
     "react": ">=18",
@@ -64,6 +65,7 @@
     "@types/react-syntax-highlighter": "^15.5.13",
     "autoprefixer": "^10.4.19",
     "babel-jest": "^29.7.0",
+    "chromatic": "^11.5.4",
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.1.2",
     "eslint-plugin-simple-import-sort": "^12.0.0",
@@ -79,5 +81,9 @@
     "storybook": "^7.6.17",
     "typescript": "^4.9.5",
     "uuid": "^9.0.1"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/oauch/neat-ui/issues"
+  },
+  "homepage": "https://github.com/oauch/neat-ui#readme"
 }

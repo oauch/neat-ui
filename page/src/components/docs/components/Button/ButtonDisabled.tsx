@@ -12,8 +12,7 @@ const App = () => {
 
 export default App;
 
-App.code = `import ComponentWrapper from "@/components/docs/ComponentWrapper";
-import { Button } from "@oauch/neat-ui";
+App.code = `import { Button } from "@oauch/neat-ui";
 
 const App = () => {
   return (

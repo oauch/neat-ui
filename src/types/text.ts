@@ -1,16 +1,18 @@
-import { ReactNode } from "react";
+import { DefaultProps } from "@/types/default";
 
-type FONT_WEIGHT = 400 | 500 | 600 | 700 | 800;
+type FontWeightType = 400 | 500 | 600 | 700 | 800;
+type AlignType = "start" | "left" | "center" | "right";
+type DecorationType = "b" | "i" | "u" | "d" | "mark";
 
-interface TextProps {
-  children: ReactNode;
+interface TextProps extends DefaultProps {
   fs?: number;
-  fw?: FONT_WEIGHT;
+  fw?: FontWeightType;
   font?: string;
   color?: string;
-  align?: string;
+  align?: AlignType;
   lineH?: number;
   letterS?: number;
+  decoration?: DecorationType;
 }
 
 export type { TextProps };

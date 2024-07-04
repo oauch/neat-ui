@@ -8,6 +8,7 @@ export const COLORS = {
   LightGray: "#D3D3D3",
   HOVER_TEXT: "#303134",
   DISABLED: " rgba(0, 0, 0, 0.2);",
+  HIGH_LIGHT: "#FFFF00",
 
   SKIN: "#F5DDC2",
   T_SHIRTS: "#01641D",

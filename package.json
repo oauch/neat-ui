@@ -25,9 +25,9 @@
   ],
   "scripts": {
     "publish": "rm -rf dist && rollup -c",
-    "version:patch": "npm version patch && git push origin master",
-    "version:minor": "npm version minor && git push origin master",
-    "version:major": "npm version major && git push origin master",
+    "version:patch": "npm version patch && git push main",
+    "version:minor": "npm version minor && git push main",
+    "version:major": "npm version major && git push main",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },

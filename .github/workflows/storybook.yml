@@ -1,55 +1,37 @@
-name: StoryBook Deploy
+name: StoryBook Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: ["main"]
 
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    concurrency:
-      group: ${{ github.workflow }}
-      cancel-in-progress: true
-
     steps:
-      - name: Use repository source
-        uses: actions/checkout@v4
-
-      - name: Use node.js
-        uses: actions/setup-node@v4
+      - name: Checkout
+        uses: actions/checkout@v3
+      - run: npm ci
+      - run: npm run build-storybook
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          node-version: 20
-
-      - name: Cache node_modules
-        id: cache
-        uses: actions/cache@v4
-        with:
-          path: "**/node_modules"
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Install dependencies
-        run: npm ci
-        if: steps.cache.outputs.cache-hit != 'true'
-
-      - name: Set PUBLIC_URL
-        run: |
-          PUBLIC_URL=$(echo $GITHUB_REPOSITORY | sed -r 's/^.+\/(.+)$/\/\1\//')
-          echo PUBLIC_URL=$PUBLIC_URL > .env
-
-      - name: Build storybook
-        run: |
-          npm run build-storybook
-          mkdir ./dist
-          mv ./storybook-static ./dist/storybook
-
-      - name: Deploy to gh-pages branch
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          path: "./storybook-static"
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2

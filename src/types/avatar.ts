@@ -1,12 +1,12 @@
 import { SizeToken } from "@/types/default";
 import { JSXElementConstructor, ReactElement, ReactNode } from "react";
 
+type IconProps = ReactElement<any, string | JSXElementConstructor<any>>;
+
 interface DefaultAvatarProps {
   size?: SizeToken;
   max?: number;
 }
-
-type IconProps = ReactElement<any, string | JSXElementConstructor<any>>;
 
 interface AvatarProps extends DefaultAvatarProps {
   index?: number;

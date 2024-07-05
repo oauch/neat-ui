@@ -1,6 +1,7 @@
 import { SIZE_MAP } from "@/constants/avatarSizeMap";
 import { COLORS } from "@/styles/color";
 import { AvatarProps } from "@/types/avatar";
+
 import styled from "@emotion/styled";
 import React from "react";
 import { RxAvatar } from "react-icons/rx";
@@ -18,14 +19,14 @@ function Avatar({
       {Icon && Icon}
       {imgUrl && <Image src={imgUrl} alt={name} {...props} />}
       {!Icon && !imgUrl && (
-        <RxAvatar
+        <DefaultAvatar
           style={{
             backgroundColor: "#2E8B57",
             borderRadius: "9999px",
             borderStyle: "hidden",
           }}
           color={COLORS.WHITE}
-          size={42 ?? props.size}
+          {...props}
         />
       )}
     </Wrapper>
@@ -54,4 +55,9 @@ const Image = styled.img<AvatarProps>`
   height: ${({ size = "md" }) => SIZE_MAP[size]}px;
   border-radius: 9999px;
   object-fit: cover;
+`;
+
+const DefaultAvatar = styled(RxAvatar)<AvatarProps>`
+  width: ${({ size = "md" }) => SIZE_MAP[size]}px;
+  height: ${({ size = "md" }) => SIZE_MAP[size]}px;
 `;

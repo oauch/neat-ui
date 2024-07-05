@@ -24,7 +24,7 @@
     "/dist"
   ],
   "scripts": {
-    "publish": "rm -rf dist && rollup -c",
+    "build": "rm -rf dist && rollup -c",
     "version:patch": "npm version patch && git push main",
     "version:minor": "npm version minor && git push main",
     "version:major": "npm version major && git push main",

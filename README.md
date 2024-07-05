@@ -22,7 +22,7 @@ npm i @oauch/neat-ui
 
 ## 💬 StoryBook
 
-<a href="https://66867486062ab43579b0cdb9-lxvqpkoqpd.chromatic.com/">StoryBook</a>
+<a href="https://oauch.github.io/neat-ui/storybook">StoryBook</a>
 
 <br />
 

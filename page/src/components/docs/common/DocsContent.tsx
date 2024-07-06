@@ -17,6 +17,7 @@ const DocsContent = ({
   props,
 }: DocsContentProps) => {
   const { t } = useTranslation();
+
   return (
     <Wrapper>
       <Head name={name} />

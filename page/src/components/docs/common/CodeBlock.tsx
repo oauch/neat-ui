@@ -11,6 +11,7 @@ type CodeBlockProp = {
 
 const CodeBlock = ({ code }: CodeBlockProp) => {
   const { isCopy, onCopy } = useClipBoard(String(code));
+
   return (
     <Wrapper>
       <SyntaxHighlighter

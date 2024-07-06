@@ -8,6 +8,7 @@ const TITLE = ["PropsName", "Type", "Description"];
 
 const Props = ({ props }: { props: ComponentProps[] }) => {
   const { t } = useTranslation();
+
   return (
     <Table>
       <thead>

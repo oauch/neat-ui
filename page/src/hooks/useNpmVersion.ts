@@ -1,21 +1,21 @@
 import { NPM_VERSION } from "@/constants/url";
+import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { useEffect, useState } from "react";
 
 const useNpmVersion = () => {
-  const [version, setVersion] = useState("");
-
   const getVersion = async () => {
     const res: any = await axios.get(NPM_VERSION);
     const { latest } = res.data["dist-tags"];
-    setVersion(`ver. ${latest}`);
+    return `ver. ${latest}`;
   };
 
-  useEffect(() => {
-    getVersion();
-  }, []);
+  const { data: neatUiVer } = useQuery({
+    staleTime: 60 * 60 * 1000,
+    queryKey: ["neatUiVer"],
+    queryFn: getVersion,
+  });
 
-  return { version };
+  return { neatUiVer };
 };
 
 export default useNpmVersion;

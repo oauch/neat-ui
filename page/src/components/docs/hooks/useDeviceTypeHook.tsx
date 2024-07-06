@@ -9,17 +9,17 @@ const App = () => {
       style={{ display: "flex", flexDirection: "column", gap: "10px" }}
     >
       {isMobile && (
-        <Text fs={2} fw={800} color={COLORS.SeaGreen}>
+        <Text fs={20} fw={800} color={COLORS.SeaGreen}>
           Mobile
         </Text>
       )}
       {isTablet && (
-        <Text fs={2} fw={800} color={COLORS.SeaGreen}>
+        <Text fs={20} fw={800} color={COLORS.SeaGreen}>
           Tablet
         </Text>
       )}
       {!isMobile && !isTablet && (
-        <Text fs={2} fw={800} color={COLORS.SeaGreen}>
+        <Text fs={20} fw={800} color={COLORS.SeaGreen}>
           PC
         </Text>
       )}

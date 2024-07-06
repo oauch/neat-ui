@@ -1,4 +1,4 @@
-import CodeBlock from "@/components/docs/CodeBlock";
+import CodeBlock from "@/components/docs/common/CodeBlock";
 import { COLORS } from "@/styles/colors";
 import { ExampleListItem } from "@/types/Docs";
 import styled from "@emotion/styled";

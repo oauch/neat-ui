@@ -1,5 +1,5 @@
-import DocsContent from "@/components/docs/DocsContent";
-import DocsLayout from "@/components/docs/DocsLayout";
+import DocsContent from "@/components/docs/common/DocsContent";
+import DocsLayout from "@/components/docs/common/DocsLayout";
 import ChipBgColor from "@/components/docs/components/Chip/ChipBgColor";
 import ChipColor from "@/components/docs/components/Chip/ChipColor";
 import ChipDisabled from "@/components/docs/components/Chip/ChipDisabled";

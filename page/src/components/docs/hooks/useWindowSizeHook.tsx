@@ -1,4 +1,4 @@
-import ComponentWrapper from "@/components/docs/ComponentWrapper";
+import ComponentWrapper from "@/components/docs/common/ComponentWrapper";
 import { Text, useWindowSize } from "@oauch/neat-ui";
 
 const App = () => {

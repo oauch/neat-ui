@@ -1,4 +1,5 @@
-import ComponentWrapper from "@/components/docs/ComponentWrapper";
+import ComponentWrapper from "@/components/docs/common/ComponentWrapper";
+import { COLORS } from "@/styles/colors";
 import { Text, useMediaQuery } from "@oauch/neat-ui";
 import { useEffect, useState } from "react";
 
@@ -23,7 +24,7 @@ const App = () => {
       style={{ display: "flex", alignItems: "center", gap: "10px" }}
     >
       {deviceType && (
-        <Text fs={20} fw={800}>
+        <Text fs={20} fw={800} color={COLORS.SeaGreen}>
           {deviceType}
         </Text>
       )}

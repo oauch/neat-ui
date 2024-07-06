@@ -1,5 +1,5 @@
-import Example from "@/components/docs/Example";
-import Props from "@/components/docs/Props";
+import Example from "@/components/docs/common/Example";
+import Props from "@/components/docs/common/Props";
 import Head from "@/components/layout/Head";
 import ImportSource from "@/components/layout/ImportSource";
 import { COLORS } from "@/styles/colors";

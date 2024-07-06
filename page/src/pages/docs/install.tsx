@@ -1,5 +1,5 @@
-import DocsContent from "@/components/docs/DocsContent";
-import DocsLayout from "@/components/docs/DocsLayout";
+import DocsContent from "@/components/docs/common/DocsContent";
+import DocsLayout from "@/components/docs/common/DocsLayout";
 import { COLORS } from "@/styles/colors";
 import styled from "@emotion/styled";
 import { useTranslation } from "react-i18next";

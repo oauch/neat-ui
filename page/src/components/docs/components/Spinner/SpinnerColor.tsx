@@ -1,4 +1,4 @@
-import ComponentWrapper from "@/components/docs/ComponentWrapper";
+import ComponentWrapper from "@/components/docs/common/ComponentWrapper";
 import { COLORS } from "@/styles/colors";
 import { Spinner } from "@oauch/neat-ui";
 

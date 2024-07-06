@@ -1,4 +1,4 @@
-import ComponentWrapper from "@/components/docs/ComponentWrapper";
+import ComponentWrapper from "@/components/docs/common/ComponentWrapper";
 import { Avatar, AvatarGroup } from "@oauch/neat-ui";
 import { LuLeafyGreen } from "react-icons/lu";
 

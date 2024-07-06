@@ -16,7 +16,6 @@ i18n.use(initReactI18next).init({
   resources,
   lng: "en_US",
   fallbackLng: "en_US",
-  debug: true,
   interpolation: { escapeValue: true },
   returnObjects: true,
   returnEmptyString: true,

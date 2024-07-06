@@ -1,4 +1,4 @@
-import ComponentWrapper from "@/components/docs/ComponentWrapper";
+import ComponentWrapper from "@/components/docs/common/ComponentWrapper";
 import { Chip, Text, useHover } from "@oauch/neat-ui";
 import { useRef } from "react";
 

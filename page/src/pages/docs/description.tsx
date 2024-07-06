@@ -1,5 +1,5 @@
-import DocsContent from "@/components/docs/DocsContent";
-import DocsLayout from "@/components/docs/DocsLayout";
+import DocsContent from "@/components/docs/common/DocsContent";
+import DocsLayout from "@/components/docs/common/DocsLayout";
 import styled from "@emotion/styled";
 import { Flex, Text } from "@oauch/neat-ui";
 import { useTranslation } from "react-i18next";

@@ -1,5 +1,5 @@
-import DocsContent from "@/components/docs/DocsContent";
-import DocsLayout from "@/components/docs/DocsLayout";
+import DocsContent from "@/components/docs/common/DocsContent";
+import DocsLayout from "@/components/docs/common/DocsLayout";
 import CodeBgColor from "@/components/docs/components/Code/CodeBgColor";
 import CodeColor from "@/components/docs/components/Code/CodeColor";
 import CodeFs from "@/components/docs/components/Code/CodeFs";

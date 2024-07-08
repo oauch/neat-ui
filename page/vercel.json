@@ -1,0 +1,11 @@
+{
+  "github": {
+    "productionBranch": "feat/page",
+    "deployments": {
+      "staging": {
+        "environment": "preview",
+        "branch": "feat/page"
+      }
+    }
+  }
+}

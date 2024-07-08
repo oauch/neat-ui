@@ -1,20 +1,21 @@
-import Text from "@/components/common/Text";
 import { COLORS } from "@/styles/colors";
 import { ComponentProps } from "@/types/Docs";
 import styled from "@emotion/styled";
+import { Text } from "@oauch/neat-ui";
 import { useTranslation } from "react-i18next";
 
 const TITLE = ["PropsName", "Type", "Description"];
 
 const Props = ({ props }: { props: ComponentProps[] }) => {
   const { t } = useTranslation();
+
   return (
     <Table>
       <thead>
         <tr>
           {TITLE.map((val, index) => (
             <Th key={index}>
-              <Text fs={1.5} fw={600}>
+              <Text fs={15} fw={600}>
                 {t(val)}
               </Text>
             </Th>
@@ -25,17 +26,17 @@ const Props = ({ props }: { props: ComponentProps[] }) => {
         {props.map(({ name, type, description }) => (
           <tr key={name}>
             <Td>
-              <Text fs={1.4} fw={400}>
+              <Text fs={14} fw={400}>
                 {name}
               </Text>
             </Td>
             <Td>
-              <Text fs={1.4} fw={400}>
+              <Text fs={14} fw={400}>
                 {type.join(" | ")}
               </Text>
             </Td>
             <Td>
-              <Text fs={1.4} fw={400}>
+              <Text fs={14} fw={400}>
                 {description}
               </Text>
             </Td>

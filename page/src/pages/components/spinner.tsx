@@ -1,5 +1,5 @@
-import DocsContent from "@/components/docs/DocsContent";
-import DocsLayout from "@/components/docs/DocsLayout";
+import DocsContent from "@/components/docs/common/DocsContent";
+import DocsLayout from "@/components/docs/common/DocsLayout";
 import SpinnerColor from "@/components/docs/components/Spinner/SpinnerColor";
 import SpinnerEmptyColor from "@/components/docs/components/Spinner/SpinnerEmptyColor";
 import SpinnerSize from "@/components/docs/components/Spinner/SpinnerSize";

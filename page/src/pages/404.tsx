@@ -1,16 +1,15 @@
-import Text from "@/components/common/Text";
 import styled from "@emotion/styled";
-import { Button } from "@oauch/neat-ui";
+import { Button, Text } from "@oauch/neat-ui";
 import { useRouter } from "next/navigation";
 
 const NotFoundPage = () => {
   const navigate = useRouter();
   return (
     <Wrapper>
-      <Text fs={4} fw={800}>
+      <Text fs={40} fw={800}>
         404
       </Text>
-      <Text fs={2} fw={600}>
+      <Text fs={20} fw={600}>
         Not Found Page.
       </Text>
       <Button onClick={() => navigate.back()}>Back page</Button>

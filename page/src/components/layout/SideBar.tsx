@@ -1,11 +1,10 @@
 import NewDocs from "@/components/common/NewDocs";
-import Text from "@/components/common/Text";
 import { DOCS_LIST } from "@/constants/docs";
 import { COLORS } from "@/styles/colors";
 import { CheckNewDocs } from "@/utils/CheckNewDocs";
 import { KeySeparation } from "@/utils/KeySeparation";
 import styled from "@emotion/styled";
-import { Flex } from "@oauch/neat-ui";
+import { Flex, Text } from "@oauch/neat-ui";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
@@ -21,7 +20,7 @@ const SideBar = () => {
           val.key !== "docs" ? CheckNewDocs(val.list) : null;
         return (
           <ListItems key={val.key}>
-            <Text fs={2.4} fw={700} color={COLORS.SeaGreen}>
+            <Text fs={24} fw={700} color={COLORS.SeaGreen}>
               {t(val.name)}
             </Text>
             <Items>

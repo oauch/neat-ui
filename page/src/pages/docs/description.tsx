@@ -1,8 +1,7 @@
-import Text from "@/components/common/Text";
-import DocsContent from "@/components/docs/DocsContent";
-import DocsLayout from "@/components/docs/DocsLayout";
+import DocsContent from "@/components/docs/common/DocsContent";
+import DocsLayout from "@/components/docs/common/DocsLayout";
 import styled from "@emotion/styled";
-import { Flex } from "@oauch/neat-ui";
+import { Flex, Text } from "@oauch/neat-ui";
 import { useTranslation } from "react-i18next";
 
 const Description = () => {
@@ -14,7 +13,7 @@ const Description = () => {
         description={t("Docs_Description_SubTItle")}
       />
       <DescriptionWrapper>
-        <Text fs={3} fw={600} lineH={100}>
+        <Text fs={30} fw={600} lineH={2}>
           {t("Docs_Description_1")}
           <br />
           {t("Docs_Description_2")}

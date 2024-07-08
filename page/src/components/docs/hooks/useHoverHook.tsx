@@ -1,6 +1,5 @@
-import Text from "@/components/common/Text";
-import ComponentWrapper from "@/components/docs/ComponentWrapper";
-import { Chip, useHover } from "@oauch/neat-ui";
+import ComponentWrapper from "@/components/docs/common/ComponentWrapper";
+import { Chip, Text, useHover } from "@oauch/neat-ui";
 import { useRef } from "react";
 
 const App = () => {
@@ -12,15 +11,14 @@ const App = () => {
       style={{ display: "flex", alignItems: "center", gap: "10px" }}
     >
       <Chip ref={DivRef}>Hover Here</Chip>
-      {isHover && <Text fs={2}>Hi Friend</Text>}
+      {isHover && <Text fs={20}>Hi Friend</Text>}
     </ComponentWrapper>
   );
 };
 
 export default App;
 
-App.code = `import Text from "@/components/common/Text";
-import { Chip, useHover } from "@oauch/neat-ui";
+App.code = `import { Chip, useHover } from "@oauch/neat-ui";
 import { useRef } from "react";
 
 const App = () => {
@@ -30,7 +28,7 @@ const App = () => {
   return (
     <div>
       <Chip ref={DivRef}>Hover Here</Chip>
-      {isHover && <Text fs={2}>Hi Friend</Text>}
+      {isHover && <p>Hi Friend</p>}
     </div>
   );
 };

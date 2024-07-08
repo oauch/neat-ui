@@ -1,49 +1,30 @@
 import IconLink from "@/components/common/IconLink";
-import Text from "@/components/common/Text";
 import { TITLE } from "@/constants/common";
 import { GITHUB, NPM } from "@/constants/url";
-import useNpmVersion from "@/hooks/useNpmVersion";
 import { COLORS } from "@/styles/colors";
+import { Text } from "@oauch/neat-ui";
 
+import useHeader from "@/hooks/useHeader";
 import styled from "@emotion/styled";
 import { Flex } from "@oauch/neat-ui";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
 import { FaGithub, FaNpm } from "react-icons/fa";
 import { FaEarthAsia } from "react-icons/fa6";
 
 const MODAL_VAL = ["한국어", "English"];
 
 const Header = () => {
-  const [locate, setLocate] = useState("en_US");
-  const [isOpen, setIsOpen] = useState(false);
-  const { version } = useNpmVersion();
-  const { i18n } = useTranslation();
-
-  const openModal = () => {
-    setIsOpen((prev) => !prev);
-  };
-
-  const handleLanguage = (language: string) => {
-    if (language === "한국어") setLocate("ko_KR");
-    if (language === "English") setLocate("en_US");
-    setIsOpen(false);
-  };
-
-  useEffect(() => {
-    i18n.changeLanguage(locate);
-  }, [locate]);
+  const { neatUiVer, openModal, isOpen, handleLanguage } = useHeader();
 
   return (
     <Wrapper>
       <Flex align="center" gap={20}>
         <Link href={"/"}>
-          <Text fs={3} fw={800} color={COLORS.SeaGreen}>
+          <Text fs={30} fw={800} color={COLORS.SeaGreen}>
             {TITLE}
           </Text>
         </Link>
-        <Version>{version}</Version>
+        <Version>{neatUiVer}</Version>
       </Flex>
       <Flex align="center" gap={10}>
         <Translate>

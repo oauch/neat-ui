@@ -1,8 +1,8 @@
+import DocsContent from "@/components/docs/common/DocsContent";
+import DocsLayout from "@/components/docs/common/DocsLayout";
 import AlertIcon from "@/components/docs/components/Alert/AlertIcon";
 import AlertStatus from "@/components/docs/components/Alert/AlertStatus";
 import AlertVariants from "@/components/docs/components/Alert/AlertVariants";
-import DocsContent from "@/components/docs/DocsContent";
-import DocsLayout from "@/components/docs/DocsLayout";
 import { useTranslation } from "react-i18next";
 
 const Alert = () => {

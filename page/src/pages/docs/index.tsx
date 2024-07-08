@@ -1,8 +1,7 @@
 import { useRedirect } from "@/hooks/useRedirect";
 
 const Docs = () => {
-  useRedirect("/docs/description");
-  return;
+  return useRedirect("/docs/description");
 };
 
 export default Docs;

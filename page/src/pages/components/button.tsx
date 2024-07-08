@@ -1,5 +1,5 @@
-import DocsContent from "@/components/docs/DocsContent";
-import DocsLayout from "@/components/docs/DocsLayout";
+import DocsContent from "@/components/docs/common/DocsContent";
+import DocsLayout from "@/components/docs/common/DocsLayout";
 import ButtonBgColor from "@/components/docs/components/Button/ButtonBgColor";
 import ButtonColor from "@/components/docs/components/Button/ButtonColor";
 import ButtonDisabled from "@/components/docs/components/Button/ButtonDisabled";

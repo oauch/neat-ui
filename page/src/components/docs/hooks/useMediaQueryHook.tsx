@@ -1,6 +1,6 @@
-import Text from "@/components/common/Text";
-import ComponentWrapper from "@/components/docs/ComponentWrapper";
-import { useMediaQuery } from "@oauch/neat-ui";
+import ComponentWrapper from "@/components/docs/common/ComponentWrapper";
+import { COLORS } from "@/styles/colors";
+import { Text, useMediaQuery } from "@oauch/neat-ui";
 import { useEffect, useState } from "react";
 
 const App = () => {
@@ -24,7 +24,7 @@ const App = () => {
       style={{ display: "flex", alignItems: "center", gap: "10px" }}
     >
       {deviceType && (
-        <Text fs={2} fw={800}>
+        <Text fs={20} fw={800} color={COLORS.SeaGreen}>
           {deviceType}
         </Text>
       )}
@@ -34,8 +34,7 @@ const App = () => {
 
 export default App;
 
-App.code = `import Text from "@/components/common/Text";
-import { Chip, useHover } from "@oauch/neat-ui";
+App.code = `import { Chip, useHover } from "@oauch/neat-ui";
 import { useRef } from "react";
 
 const App = () => {
@@ -56,7 +55,7 @@ const App = () => {
 
   return (
     <div>
-      {deviceType && <Text>{deviceType}</Text>}
+      {deviceType && <p>{deviceType}</p>}
     </div>
   );
 };

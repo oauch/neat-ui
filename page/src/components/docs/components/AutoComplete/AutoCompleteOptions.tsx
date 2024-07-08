@@ -1,4 +1,4 @@
-import ComponentWrapper from "@/components/docs/ComponentWrapper";
+import ComponentWrapper from "@/components/docs/common/ComponentWrapper";
 import { AutoComplete } from "@oauch/neat-ui";
 import { useState } from "react";
 import Top100Films from "../../../../../public/top100Films.json";

@@ -1,5 +1,5 @@
-import DocsContent from "@/components/docs/DocsContent";
-import DocsLayout from "@/components/docs/DocsLayout";
+import DocsContent from "@/components/docs/common/DocsContent";
+import DocsLayout from "@/components/docs/common/DocsLayout";
 import AvatarGroupMax from "@/components/docs/components/Avatar/AvatarGroupMax";
 import AvatarIcon from "@/components/docs/components/Avatar/AvatarIcon";
 import AvatarImgUrl from "@/components/docs/components/Avatar/AvatarImgUrl";

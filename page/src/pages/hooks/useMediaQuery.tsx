@@ -1,5 +1,5 @@
-import DocsContent from "@/components/docs/DocsContent";
-import DocsLayout from "@/components/docs/DocsLayout";
+import DocsContent from "@/components/docs/common/DocsContent";
+import DocsLayout from "@/components/docs/common/DocsLayout";
 import useMediaQueryHook from "@/components/docs/hooks/useMediaQueryHook";
 import { useTranslation } from "react-i18next";
 

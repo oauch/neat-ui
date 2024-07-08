@@ -1,5 +1,5 @@
-import DocsContent from "@/components/docs/DocsContent";
-import DocsLayout from "@/components/docs/DocsLayout";
+import DocsContent from "@/components/docs/common/DocsContent";
+import DocsLayout from "@/components/docs/common/DocsLayout";
 import BadgeBgColor from "@/components/docs/components/Badge/BadgeBgColor";
 import BadgeColor from "@/components/docs/components/Badge/BadgeColor";
 import BadgeFontSize from "@/components/docs/components/Badge/BadgeFontSize";
